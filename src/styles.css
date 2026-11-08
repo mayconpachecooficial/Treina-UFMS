@@ -1149,8 +1149,13 @@ main {
   cursor: default;
 }
 .option.selected {
-  border-color: #467c54;
-  background: #f0f7ef;
+  border-color: #547795;
+  background: #eef4fa;
+}
+.option.selected .letter {
+  border-color: #547795;
+  background: #dfeaf4;
+  color: #294c68;
 }
 .option.correct {
   border-color: #5d9768;
@@ -2096,5 +2101,35 @@ dialog::backdrop {
     animation: none !important;
     transition: none !important;
     scroll-behavior: auto !important;
+  }
+}
+
+.answer-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin: 22px 0 16px;
+}
+.answer-actions p {
+  font-size: 12px;
+  color: #596b5d;
+  flex: 1;
+  min-width: 150px;
+}
+.question-navigation {
+  flex-wrap: wrap;
+}
+@media (max-width: 660px) {
+  .question-footer > .question-navigation {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 7px;
+  }
+  .question-navigation .button {
+    padding: 10px 6px;
+    font-size: 10px;
+    gap: 4px;
   }
 }

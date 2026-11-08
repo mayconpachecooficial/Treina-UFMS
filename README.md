@@ -18,7 +18,7 @@ A prova oficial contém **60 questões e 100 pontos**: Português 15/15; Inglês
 
 Em 8/11/2026, a Vercel confirmou a implantação do commit `e112c794306f78db4a0c87ec1b39dacaf54bc6a1`; o endereço público respondeu HTTP 200 com o título da plataforma. O projeto Supabase `nmswkgugitppfebxjllf` está configurado na versão publicada: sua API de autenticação respondeu HTTP 200, o provedor de e-mail está habilitado e a tabela `study_progress` existe, com acesso anônimo negado. Nenhum registro de usuário foi lido durante essa verificação.
 
-Os 19 testes automatizados passaram, inclusive recuperação diante de URL inválida do Supabase. Uma instalação limpa também compilou com Node.js 22. A entrada por link de e-mail e a gravação na nuvem com uma conta autenticada ainda não foram verificadas de ponta a ponta. As regras de retorno do login e o isolamento entre duas contas reais exigem essa validação autenticada; os testes existentes verificam esses fluxos com serviços simulados.
+Os 22 testes automatizados passaram, inclusive recuperação diante de URL inválida do Supabase. Uma instalação limpa também compilou com Node.js 22. A entrada por link de e-mail e a gravação na nuvem com uma conta autenticada ainda não foram verificadas de ponta a ponta. As regras de retorno do login e o isolamento entre duas contas reais exigem essa validação autenticada; os testes existentes verificam esses fluxos com serviços simulados.
 
 ## Banco de questões
 
@@ -56,10 +56,10 @@ npm run preview
 
 - Painel com quantidade real de questões por matéria, aproveitamento e atividade dos últimos sete dias.
 - Filtros por matéria, assunto, dificuldade, situação e busca textual.
-- Cinco alternativas A–E; correção imediata por texto, ícone e cor, com justificativa inclusive nos acertos.
+- Cinco alternativas A–E; seleção sem revelar gabarito e botão Responder para confirmar. A correção usa texto, ícone e cor, com justificativa inclusive nos acertos.
 - Explicação da alternativa escolhida, referência e texto-base/trechos de código quando cadastrados.
-- Refazer, avançar e retomar a questão em que parou.
-- Simulado com questões embaralhadas, retomada após fechar a página e gabarito comentado ao final.
+- Anterior, Próxima e Refazer; retomada da questão em que parou. As respostas confirmadas são preservadas ao navegar.
+- Simulado com questões embaralhadas e confirmação por Responder. As respostas confirmadas são recuperadas após fechar a página; o gabarito comentado aparece ao final.
 - Revisão de erradas e marcadas; desempenho por matéria e por assunto.
 - Mapa de cobertura por título literal do edital e IDs de questões.
 - Persistência local, exportação/importação de progresso e reinício com confirmação.
@@ -141,3 +141,9 @@ Os testes automatizados verificam o motor e os fluxos de interação em DOM simu
 ## Recuperação de configuração
 
 Uma configuração incompleta ou uma URL inválida do Supabase não impede a abertura do site: o estudo e o salvamento local continuam disponíveis. A seção Configurações informa a indisponibilidade da conexão. As variáveis são aplicadas durante a compilação; atualizar valores na Vercel exige nova implantação.
+
+## Seleção e confirmação de respostas
+
+Marcar uma alternativa cria uma seleção provisória. Ela pode ser trocada antes de clicar em **Responder** e ainda não conta como tentativa. No estudo por assunto, confirmar exibe o comentário e registra a resposta no progresso. No simulado, confirmar registra a resposta e o gabarito continua reservado ao final.
+
+Os botões **Anterior** e **Próxima** mantêm a sequência iniciada, inclusive quando uma resposta altera a situação da questão no filtro Não respondidas ou Erradas. Trocar filtros inicia outra sequência. Seleções provisórias são mantidas durante a navegação enquanto a página permanece aberta; somente respostas confirmadas são salvas no navegador e sincronizadas com a conta. Refazer permite uma nova tentativa sem apagar o histórico anterior.

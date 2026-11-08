@@ -50,6 +50,30 @@ vi.mock("../src/data", () => ({
         ],
         verified: true,
       },
+      {
+        id: "teste-2",
+        subject: "especificos",
+        topicId: "teste",
+        difficulty: "Difícil",
+        prompt: "Segunda questão técnica para testar navegação.",
+        options: [
+          "Segunda um",
+          "Segunda dois",
+          "Segunda três",
+          "Segunda quatro",
+          "Segunda cinco",
+        ],
+        correct: 1,
+        explanation: "Comentário da segunda questão.",
+        rationale: [
+          "Segunda justificativa um",
+          "Segunda justificativa dois",
+          "Segunda justificativa três",
+          "Segunda justificativa quatro",
+          "Segunda justificativa cinco",
+        ],
+        verified: true,
+      },
     ],
   },
 }));
@@ -59,6 +83,7 @@ vi.mock("../src/lib/supabase", () => ({
 }));
 beforeEach(() => {
   localStorage.clear();
+  vi.spyOn(Math, "random").mockReturnValue(0.999);
   HTMLDialogElement.prototype.showModal = function () {
     this.setAttribute("open", "");
   };
@@ -66,7 +91,10 @@ beforeEach(() => {
     this.removeAttribute("open");
   };
 });
-afterEach(cleanup);
+afterEach(() => {
+  cleanup();
+  vi.restoreAllMocks();
+});
 async function openStudy() {
   render(<App />);
   await waitFor(() =>
@@ -79,12 +107,14 @@ test("gabarito oculto; erro explicado; refazer registra acerto", async () => {
   expect(screen.queryByText("Você acertou!")).toBeNull();
   expect(screen.queryByText("Comentário de teste.")).toBeNull();
   fireEvent.click(screen.getByRole("button", { name: "A Opção um" }));
+  fireEvent.click(screen.getByRole("button", { name: "Responder" }));
   expect(screen.getByText("Você errou")).toBeTruthy();
   expect(screen.getByText("Justificativa um")).toBeTruthy();
   expect(screen.getByText("Justificativa três")).toBeTruthy();
   fireEvent.click(screen.getByRole("button", { name: "Refazer" }));
   expect(screen.queryByText("Você errou")).toBeNull();
   fireEvent.click(screen.getByRole("button", { name: "C Opção três" }));
+  fireEvent.click(screen.getByRole("button", { name: "Responder" }));
   expect(screen.getByText("Você acertou!")).toBeTruthy();
   const saved = JSON.parse(localStorage.getItem(STORAGE_KEY)!);
   expect(saved.answers["teste-1"].correct).toBe(true);
@@ -96,6 +126,7 @@ test("correção permanece visível no filtro não respondidas", async () => {
     target: { value: "nao-respondidas" },
   });
   fireEvent.click(screen.getByRole("button", { name: "A Opção um" }));
+  fireEvent.click(screen.getByRole("button", { name: "Responder" }));
   expect(screen.getByText("Você errou")).toBeTruthy();
 });
 test("simulado retoma resposta após reabrir e corrige apenas ao finalizar", async () => {
@@ -106,6 +137,10 @@ test("simulado retoma resposta após reabrir e corrige apenas ao finalizar", asy
   fireEvent.click(screen.getByRole("button", { name: "Simulados" }));
   fireEvent.click(screen.getByRole("button", { name: "Iniciar simulado" }));
   fireEvent.click(screen.getByRole("button", { name: "C Opção três" }));
+  expect(
+    JSON.parse(localStorage.getItem(STORAGE_KEY)!).simulation.choices,
+  ).toEqual({});
+  fireEvent.click(screen.getByRole("button", { name: "Responder" }));
   expect(screen.queryByText("Comentário de teste.")).toBeNull();
   view.unmount();
   render(<App />);
@@ -118,6 +153,9 @@ test("simulado retoma resposta após reabrir e corrige apenas ao finalizar", asy
       .getByRole("button", { name: "C Opção três" })
       .getAttribute("aria-pressed"),
   ).toBe("true");
+  fireEvent.click(screen.getByRole("button", { name: "Próxima questão" }));
+  fireEvent.click(screen.getByRole("button", { name: "B Segunda dois" }));
+  fireEvent.click(screen.getByRole("button", { name: "Responder" }));
   fireEvent.click(
     screen.getAllByRole("button", { name: "Finalizar simulado" })[0],
   );
@@ -131,6 +169,7 @@ test("marcadores e respostas são recuperados ao reabrir", async () => {
   await openStudy();
   fireEvent.click(screen.getByRole("button", { name: "Marcar para revisão" }));
   fireEvent.click(screen.getByRole("button", { name: "B Opção dois" }));
+  fireEvent.click(screen.getByRole("button", { name: "Responder" }));
   cleanup();
   render(<App />);
   await waitFor(() =>
@@ -145,6 +184,7 @@ test("marcadores e respostas são recuperados ao reabrir", async () => {
 test("reinício pede confirmação e limpa respostas", async () => {
   await openStudy();
   fireEvent.click(screen.getByRole("button", { name: "C Opção três" }));
+  fireEvent.click(screen.getByRole("button", { name: "Responder" }));
   fireEvent.click(screen.getByRole("button", { name: "Configurações" }));
   fireEvent.click(screen.getByRole("button", { name: "Reiniciar progresso" }));
   expect(screen.getByText("Reiniciar seu progresso?")).toBeTruthy();
@@ -169,4 +209,78 @@ test("identifica o simulado de três áreas como treino parcial da prova", async
   expect(screen.getByText("Língua Inglesa")).toBeTruthy();
   expect(screen.getByText("Raciocínio Lógico")).toBeTruthy();
   expect(screen.getAllByText("Sem questões cadastradas")).toHaveLength(2);
+});
+
+test("selecionar permite trocar a alternativa sem corrigir nem registrar tentativa", async () => {
+  await openStudy();
+  expect(
+    screen.getByRole("button", { name: "Responder" }).hasAttribute("disabled"),
+  ).toBe(true);
+  const firstOption = screen.getByRole("button", { name: "A Opção um" });
+  firstOption.focus();
+  fireEvent.click(firstOption);
+  expect(document.activeElement).toBe(firstOption);
+  expect(firstOption.classList.contains("correct")).toBe(false);
+  fireEvent.click(screen.getByRole("button", { name: "C Opção três" }));
+  expect(screen.queryByText("Você acertou!")).toBeNull();
+  expect(screen.queryByText("Você errou")).toBeNull();
+  expect(screen.queryByText("Comentário de teste.")).toBeNull();
+  expect(JSON.parse(localStorage.getItem(STORAGE_KEY)!).history).toHaveLength(
+    0,
+  );
+  fireEvent.click(screen.getByRole("button", { name: "Responder" }));
+  expect(screen.getByText("Você acertou!")).toBeTruthy();
+  expect(JSON.parse(localStorage.getItem(STORAGE_KEY)!).history).toHaveLength(
+    1,
+  );
+  expect(
+    screen.getByRole("button", { name: "Responder" }).hasAttribute("disabled"),
+  ).toBe(true);
+});
+
+test("anterior e próxima mantêm seleções pendentes e respostas confirmadas", async () => {
+  await openStudy();
+  expect(
+    screen.getByRole("button", { name: "Anterior" }).hasAttribute("disabled"),
+  ).toBe(true);
+  fireEvent.click(screen.getByRole("button", { name: "C Opção três" }));
+  fireEvent.click(screen.getByRole("button", { name: "Próxima" }));
+  expect(
+    screen.getByRole("button", { name: "Próxima" }).hasAttribute("disabled"),
+  ).toBe(true);
+  fireEvent.click(screen.getByRole("button", { name: "B Segunda dois" }));
+  fireEvent.click(screen.getByRole("button", { name: "Responder" }));
+  fireEvent.click(screen.getByRole("button", { name: "Anterior" }));
+  expect(
+    screen
+      .getByRole("button", { name: "C Opção três" })
+      .getAttribute("aria-pressed"),
+  ).toBe("true");
+  expect(screen.queryByText("Você acertou!")).toBeNull();
+  fireEvent.click(screen.getByRole("button", { name: "Responder" }));
+  fireEvent.click(screen.getByRole("button", { name: "Próxima" }));
+  expect(screen.getByText("Você acertou!")).toBeTruthy();
+  expect(
+    screen
+      .getByRole("button", { name: /^B Segunda dois/ })
+      .getAttribute("aria-pressed"),
+  ).toBe("true");
+  expect(JSON.parse(localStorage.getItem(STORAGE_KEY)!).history).toHaveLength(
+    2,
+  );
+});
+
+test("é possível voltar às questões confirmadas dentro da sequência de não respondidas", async () => {
+  await openStudy();
+  fireEvent.change(screen.getByLabelText("Situação"), {
+    target: { value: "nao-respondidas" },
+  });
+  fireEvent.click(screen.getByRole("button", { name: "A Opção um" }));
+  fireEvent.click(screen.getByRole("button", { name: "Responder" }));
+  fireEvent.click(screen.getByRole("button", { name: "Próxima" }));
+  fireEvent.click(screen.getByRole("button", { name: "Anterior" }));
+  expect(screen.getByText("Você errou")).toBeTruthy();
+  expect(JSON.parse(localStorage.getItem(STORAGE_KEY)!).history).toHaveLength(
+    1,
+  );
 });

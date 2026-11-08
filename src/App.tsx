@@ -32,6 +32,7 @@ import {
   XCircle,
 } from "lucide-react";
 import { bank } from "./data";
+import QuestionCard, { questionDraftKey } from "./components/QuestionCard";
 import { exam } from "./data/exam";
 import { additionalSyllabus } from "./data/topics";
 import { subjects, type Question, type Subject } from "./types";
@@ -107,7 +108,13 @@ function App() {
   const [filter, setFilter] = useState("todas");
   const [search, setSearch] = useState("");
   const [activeId, setActiveId] = useState<string | null>(null);
-  const [reveal, setReveal] = useState(true);
+  const [draftChoices, setDraftChoices] = useState<
+    Record<string, number | undefined>
+  >({});
+  const [studySession, setStudySession] = useState<{
+    key: string;
+    ids: string[];
+  } | null>(null);
   const [simulationSize, setSimulationSize] = useState(20);
   const [reviewTab, setReviewTab] = useState("erradas");
   const [authOpen, setAuthOpen] = useState(false);
@@ -131,11 +138,16 @@ function App() {
     setPage(p);
     setMobile(false);
     setActiveId(null);
+    setStudySession(null);
     setNotice("");
   };
   useEffect(() => {
     main.current?.focus();
   }, [page]);
+  useEffect(() => {
+    setDraftChoices({});
+    setStudySession(null);
+  }, [user?.id]);
   useEffect(() => {
     if (authOpen || resetOpen) dialog.current?.showModal();
     else dialog.current?.close();
@@ -160,22 +172,46 @@ function App() {
       : progress.bookmarks.includes(q.id),
   );
   const baseList = page === "revisao" ? reviewed : filtered;
-  const retained = available.find((q) => q.id === activeId);
-  const list =
-    retained && !baseList.some((q) => q.id === retained.id)
-      ? [retained, ...baseList]
-      : baseList;
+  const studyContext = JSON.stringify([
+    page,
+    subject,
+    topic,
+    difficulty,
+    filter,
+    search,
+    reviewTab,
+  ]);
+  const sessionIds =
+    studySession?.key === studyContext
+      ? studySession.ids
+      : baseList.map((q) => q.id);
+  const list = sessionIds
+    .map((id) => available.find((q) => q.id === id))
+    .filter((q): q is Question => !!q);
   const active = list.find((q) => q.id === activeId) ?? list[0];
+  const captureStudySession = () => {
+    if (studySession?.key !== studyContext) {
+      setStudySession({ key: studyContext, ids: list.map((q) => q.id) });
+    }
+  };
+  const moveQuestion = (index: number) => {
+    const next = list[index];
+    if (!next || !ready) return;
+    captureStudySession();
+    setActiveId(next.id);
+    update((p) => ({ ...p, cursor: next.id }));
+  };
   const openSubject = (id: Subject) => {
     setSubject(id);
     setTopic("");
-    setReveal(true);
+    setStudySession(null);
     setFilter("todas");
     setDifficulty("");
     setSearch("");
     go("questoes");
   };
   const toggleBookmark = (q: Question) => {
+    if (page !== "simulado") captureStudySession();
     setActiveId(q.id);
     update((p) => ({
       ...p,
@@ -188,9 +224,69 @@ function App() {
     bank.topics.find((t) => t.id === q.topicId)?.title ??
     "Assunto não identificado";
   const answer = (q: Question, choice: number) => {
+    if (!ready) return;
+    captureStudySession();
     setActiveId(q.id);
     update((p) => recordAnswer(p, q, choice));
-    setReveal(true);
+    setDraftChoices((drafts) => {
+      const next = { ...drafts };
+      delete next[q.id];
+      return next;
+    });
+  };
+  const redoQuestion = (q: Question) => {
+    captureStudySession();
+    setActiveId(q.id);
+    setDraftChoices((drafts) => ({ ...drafts, [q.id]: undefined }));
+  };
+  const selectQuestionChoice = (
+    q: Question,
+    value: number,
+    simulation = false,
+  ) => {
+    if (!ready) return;
+    if (!simulation) {
+      captureStudySession();
+      setActiveId(q.id);
+    }
+    const draftKey = questionDraftKey(
+      q.id,
+      simulation,
+      progress.simulation?.startedAt,
+    );
+    setDraftChoices((drafts) => ({ ...drafts, [draftKey]: value }));
+  };
+  const submitQuestionChoice = (q: Question, simulation = false) => {
+    const draftKey = questionDraftKey(
+      q.id,
+      simulation,
+      progress.simulation?.startedAt,
+    );
+    const choice = draftChoices[draftKey];
+    if (
+      !ready ||
+      !Object.prototype.hasOwnProperty.call(draftChoices, draftKey) ||
+      choice === undefined
+    )
+      return;
+    if (!simulation) {
+      answer(q, choice);
+      return;
+    }
+    update((p) => ({
+      ...p,
+      simulation: p.simulation
+        ? {
+            ...p.simulation,
+            choices: { ...p.simulation.choices, [q.id]: choice },
+          }
+        : null,
+    }));
+    setDraftChoices((drafts) => {
+      const next = { ...drafts };
+      delete next[draftKey];
+      return next;
+    });
   };
   const startSimulation = () => {
     const ids = shuffled(available)
@@ -257,173 +353,12 @@ function App() {
       const data: unknown = JSON.parse(await file.text());
       if (!isProgress(data)) throw new Error();
       update(() => data);
+      setDraftChoices({});
+      setStudySession(null);
       setNotice("Progresso importado.");
     } catch {
       setNotice("Arquivo inválido. Use um JSON exportado por esta plataforma.");
     }
-  }
-  function QuestionCard({
-    question: q,
-    index,
-    total,
-    simulation = false,
-  }: {
-    question: Question;
-    index: number;
-    total: number;
-    simulation?: boolean;
-  }) {
-    const choice = simulation
-      ? progress.simulation?.choices[q.id]
-      : reveal
-        ? progress.answers[q.id]?.choice
-        : undefined;
-    const answered = choice !== undefined;
-    const corrected = answered && !simulation;
-    return (
-      <article className="question-card panel">
-        <div className="question-top">
-          <span className="eyebrow">
-            QUESTÃO {String(index + 1).padStart(2, "0")} <span>/ {total}</span>
-          </span>
-          <button
-            className={`icon-button ${progress.bookmarks.includes(q.id) ? "marked" : ""}`}
-            aria-label={
-              progress.bookmarks.includes(q.id)
-                ? "Remover dos marcados"
-                : "Marcar para revisão"
-            }
-            aria-pressed={progress.bookmarks.includes(q.id)}
-            disabled={!ready}
-            onClick={() => toggleBookmark(q)}
-          >
-            <Bookmark size={19} />
-          </button>
-        </div>
-        <div className="tags">
-          <span>{subjects.find((s) => s.id === q.subject)?.name}</span>
-          <span className="difficulty">{q.difficulty}</span>
-          <span>Questão inédita</span>
-        </div>
-        <h2>{topicTitle(q)}</h2>
-        {q.baseText && (
-          <div className="base-text">
-            <strong>{q.baseText.title}</strong>
-            {q.baseText.text.split("\n").map((p, i) => (
-              <p key={i}>{p}</p>
-            ))}
-            <small>Texto original produzido para estudo.</small>
-          </div>
-        )}
-        <p className="prompt">{q.prompt}</p>
-        {q.code && (
-          <pre>
-            <code>{q.code}</code>
-          </pre>
-        )}
-        <div
-          className="options"
-          role="group"
-          aria-label="Alternativas da questão"
-        >
-          {q.options.map((option, i) => {
-            const correct = corrected && i === q.correct;
-            const wrong = corrected && i === choice && i !== q.correct;
-            return (
-              <button
-                key={i}
-                className={`option ${correct ? "correct" : ""} ${wrong ? "wrong" : ""} ${simulation && choice === i ? "selected" : ""}`}
-                disabled={!ready || corrected}
-                aria-pressed={choice === i}
-                onClick={() =>
-                  simulation
-                    ? update((p) => ({
-                        ...p,
-                        simulation: p.simulation
-                          ? {
-                              ...p.simulation,
-                              choices: { ...p.simulation.choices, [q.id]: i },
-                            }
-                          : null,
-                      }))
-                    : answer(q, i)
-                }
-              >
-                <span className="letter">{letters[i]}</span>
-                <span>{option}</span>
-                {correct ? (
-                  <CheckCircle2 size={20} aria-label="Alternativa correta" />
-                ) : wrong ? (
-                  <XCircle size={20} aria-label="Sua resposta incorreta" />
-                ) : null}
-              </button>
-            );
-          })}
-        </div>
-        {corrected && (
-          <div
-            role="status"
-            aria-live="polite"
-            className={`feedback ${choice === q.correct ? "success" : "error"}`}
-          >
-            <h3>
-              {choice === q.correct ? (
-                <CheckCircle2 size={21} />
-              ) : (
-                <XCircle size={21} />
-              )}{" "}
-              {choice === q.correct ? "Você acertou!" : "Você errou"}
-            </h3>
-            <p>
-              <strong>Alternativa correta: {letters[q.correct]}.</strong>{" "}
-              {q.explanation}
-            </p>
-            <p>
-              <strong>Por que {letters[q.correct]} está certa:</strong>{" "}
-              {q.rationale[q.correct]}
-            </p>
-            {choice !== q.correct && (
-              <p>
-                <strong>Por que {letters[choice!]} está errada:</strong>{" "}
-                {q.rationale[choice!]}
-              </p>
-            )}
-            {q.reference && (
-              <p className="reference">Referência: {q.reference}</p>
-            )}
-          </div>
-        )}
-        <footer className="question-footer">
-          <span>
-            <ShieldCheck size={15} /> Material autoral · não oficial da FAPEC
-          </span>
-          {!simulation && (
-            <div>
-              <button
-                className="button subtle"
-                onClick={() => setReveal(false)}
-              >
-                <RotateCcw size={16} /> Refazer
-              </button>
-              <button
-                className="button primary"
-                disabled={index === total - 1}
-                onClick={() => {
-                  setActiveId(list[index + 1]?.id ?? null);
-                  setReveal(true);
-                  update((p) => ({
-                    ...p,
-                    cursor: list[index + 1]?.id ?? null,
-                  }));
-                }}
-              >
-                Próxima <ArrowRight size={16} />
-              </button>
-            </div>
-          )}
-        </footer>
-      </article>
-    );
   }
   const days = Array.from({ length: 7 }, (_, i) => {
     const date = new Date();
@@ -618,7 +553,7 @@ function App() {
                         setDifficulty("");
                         setFilter("todas");
                         setSearch("");
-                        setReveal(true);
+                        setStudySession(null);
                         setActiveId(progress.cursor);
                         setPage("questoes");
                       }}
@@ -881,7 +816,7 @@ function App() {
                           onChange={(e) => {
                             setSearch(e.target.value);
                             setActiveId(null);
-                            setReveal(true);
+                            setStudySession(null);
                           }}
                         />
                       </label>
@@ -894,7 +829,7 @@ function App() {
                               setSubject(e.target.value as Subject | "");
                               setTopic("");
                               setActiveId(null);
-                              setReveal(true);
+                              setStudySession(null);
                             }}
                           >
                             <option value="">Todas as matérias</option>
@@ -912,7 +847,7 @@ function App() {
                             onChange={(e) => {
                               setTopic(e.target.value);
                               setActiveId(null);
-                              setReveal(true);
+                              setStudySession(null);
                             }}
                           >
                             <option value="">Todos os assuntos</option>
@@ -932,7 +867,7 @@ function App() {
                             onChange={(e) => {
                               setDifficulty(e.target.value);
                               setActiveId(null);
-                              setReveal(true);
+                              setStudySession(null);
                             }}
                           >
                             <option value="">Todos os níveis</option>
@@ -947,7 +882,7 @@ function App() {
                             onChange={(e) => {
                               setFilter(e.target.value);
                               setActiveId(null);
-                              setReveal(true);
+                              setStudySession(null);
                             }}
                           >
                             <option value="todas">Todas as questões</option>
@@ -974,7 +909,7 @@ function App() {
                         onClick={() => {
                           setReviewTab("erradas");
                           setActiveId(null);
-                          setReveal(true);
+                          setStudySession(null);
                         }}
                       >
                         Questões erradas
@@ -985,7 +920,7 @@ function App() {
                         onClick={() => {
                           setReviewTab("marcadas");
                           setActiveId(null);
-                          setReveal(true);
+                          setStudySession(null);
                         }}
                       >
                         Marcadas para revisão
@@ -993,8 +928,13 @@ function App() {
                     </div>
                   )}
                   <div className="results-label">
-                    <strong>{list.length} questões encontradas</strong>
-                    <span>Correção imediata com comentários</span>
+                    <strong>
+                      {list.length} questões{" "}
+                      {studySession?.key === studyContext
+                        ? "nesta sequência"
+                        : "encontradas"}
+                    </strong>
+                    <span>Correção após clicar em Responder</span>
                   </div>
                   {active ? (
                     <QuestionCard
@@ -1002,6 +942,17 @@ function App() {
                       question={active}
                       index={list.indexOf(active)}
                       total={list.length}
+                      progress={progress}
+                      ready={ready}
+                      draftChoices={draftChoices}
+                      topic={topicTitle(active)}
+                      onSelect={(choice) =>
+                        selectQuestionChoice(active, choice)
+                      }
+                      onSubmit={() => submitQuestionChoice(active)}
+                      onRedo={() => redoQuestion(active)}
+                      onBookmark={() => toggleBookmark(active)}
+                      onNavigate={moveQuestion}
                     />
                   ) : (
                     <div className="panel">
@@ -1222,6 +1173,17 @@ function App() {
                         index={sim.index}
                         total={sim.ids.length}
                         simulation
+                        progress={progress}
+                        ready={ready}
+                        draftChoices={draftChoices}
+                        topic={topicTitle(q)}
+                        onSelect={(choice) =>
+                          selectQuestionChoice(q, choice, true)
+                        }
+                        onSubmit={() => submitQuestionChoice(q, true)}
+                        onRedo={() => {}}
+                        onBookmark={() => toggleBookmark(q)}
+                        onNavigate={() => {}}
                       />
                       <div className="simulation-nav">
                         <button
@@ -1539,7 +1501,7 @@ function App() {
                                   setSearch("");
                                   setDifficulty("");
                                   setActiveId(q.id);
-                                  setReveal(true);
+                                  setStudySession(null);
                                   setPage("questoes");
                                 }}
                               >
@@ -1720,6 +1682,8 @@ function App() {
                   className="button danger"
                   onClick={() => {
                     update(() => emptyProgress());
+                    setDraftChoices({});
+                    setStudySession(null);
                     setResetOpen(false);
                     setNotice("Progresso reiniciado.");
                   }}
