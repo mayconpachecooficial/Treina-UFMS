@@ -33,7 +33,9 @@ const markdown = [
   "",
   "Fonte: " +
     bank.source.title +
-    ". Transcrição das duas imagens recebidas; edital completo pendente.",
+    (bank.source.fullEditalReceived
+      ? ". Conteúdo conferido no PDF integral de 47 páginas; Anexo V, páginas 29–30."
+      : ". Base documental parcial."),
   "",
   "| Matéria | Criadas | Liberadas |",
   "| --- | ---: | ---: |",
@@ -62,7 +64,7 @@ const markdown = [
   ]),
   "As cinco questões práticas de eMAG 2.0 aguardam a conferência da cartilha histórica. As três questões históricas liberadas indicam sua fonte oficial.",
   "",
-  "A numeração do Código de Ética diverge: imagem 426; PDF oficial do link indicado 496. Confira o edital integral/retificação. Raciocínio Lógico e Inglês estão transcritos na interface, sem banco de questões por não integrarem as três áreas solicitadas.",
+  "A numeração do Código de Ética diverge: o edital integral também cita 426, mas o documento oficial do link indicado é 496. Aguarda esclarecimento oficial. Raciocínio Lógico e Inglês estão transcritos na interface, sem banco de questões por não integrarem as três áreas solicitadas.",
   "",
 ].join("\n");
 writeFileSync(new URL("../docs/cobertura.md", import.meta.url), markdown);

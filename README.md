@@ -4,17 +4,21 @@ Plataforma independente de estudos para o cargo Analista de Tecnologia da Inform
 
 ## Situação da entrega
 
-A interface e o motor de estudo estão implementados. O conteúdo programático foi transcrito das imagens `177595.jpg` e `187849.jpg` do Anexo V, Edital Progep/UFMS nº 152, de 29 de outubro de 2026. **O edital completo não foi recebido**: regras temporais, retificações e versões aplicáveis das normas precisam de conferência antes de considerar o material integralmente validado.
+O edital integral fornecido pelo usuário foi recebido e cotejado com o banco: PDF de 47 páginas, Edital Progep/UFMS nº 152, de 29 de outubro de 2026. O Anexo V está nas páginas 29–30 para as áreas deste projeto. O mapa preserva os 45 tópicos das três áreas e informa as páginas reais da fonte. Veja a [conferência do edital](docs/conferencia-edital.md).
+
+O item 1.9 exclui da prova legislação que entre em vigor após a **data de publicação** do edital. A data do documento (29/10/2026) não é tratada automaticamente como comprovação da data de publicação. A consulta às versões normativas e às eventuais retificações deve respeitar esse critério.
 
 O mapa inclui Português, Legislação, os 18 tópicos específicos e a transcrição de Raciocínio Lógico e Língua Inglesa. As duas últimas matérias não integram o banco de questões solicitado.
 
-**Divergência documental:** na imagem fornecida, o Código de Ética aparece como Resolução nº 426-Coun/UFMS. O PDF oficial no endereço indicado pelo próprio anexo (pid=593987) é a Resolução nº **496-COUN/UFMS, de 1º de abril de 2026**. A transcrição mantém o número da imagem e as questões sobre o PDF citam o número oficial. Confira o edital original/retificação para resolver a divergência.
+A prova oficial contém **60 questões e 100 pontos**: Português 15/15; Inglês 5/5; Legislação 10/20; Raciocínio Lógico 10/20; Específicos 20/40 (quantidade/pontos). Dura quatro horas. Os itens 10.1 e 10.2 exigem pelo menos 50% dos pontos e vedam nota zero em qualquer área. Como Inglês e Raciocínio Lógico ainda não têm questões nesta plataforma, os simulados atuais são identificados como **treinos parciais de três áreas**, sem cálculo de aprovação oficial.
+
+**Divergência documental:** no PDF integral, página 29, e na imagem fornecida, o Código de Ética aparece como Resolução nº 426-Coun/UFMS. O PDF oficial no endereço indicado pelo próprio anexo (pid=593987) é a Resolução nº **496-COUN/UFMS, de 1º de abril de 2026**. A transcrição mantém o número do edital e as questões sobre o documento vinculado citam o número oficial. O PDF integral confirma a divergência; não a resolve. Aguarda esclarecimento ou retificação oficial.
 
 **Site publicado:** https://treina-ufms.vercel.app
 
 Em 8/11/2026, a Vercel confirmou a implantação do commit `e112c794306f78db4a0c87ec1b39dacaf54bc6a1`; o endereço público respondeu HTTP 200 com o título da plataforma. O projeto Supabase `nmswkgugitppfebxjllf` está configurado na versão publicada: sua API de autenticação respondeu HTTP 200, o provedor de e-mail está habilitado e a tabela `study_progress` existe, com acesso anônimo negado. Nenhum registro de usuário foi lido durante essa verificação.
 
-Os 18 testes automatizados passaram, inclusive recuperação diante de URL inválida do Supabase. Uma instalação limpa também compilou com Node.js 22. A entrada por link de e-mail e a gravação na nuvem com uma conta autenticada ainda não foram verificadas de ponta a ponta. As regras de retorno do login e o isolamento entre duas contas reais exigem essa validação autenticada; os testes existentes verificam esses fluxos com serviços simulados.
+Os 19 testes automatizados passaram, inclusive recuperação diante de URL inválida do Supabase. Uma instalação limpa também compilou com Node.js 22. A entrada por link de e-mail e a gravação na nuvem com uma conta autenticada ainda não foram verificadas de ponta a ponta. As regras de retorno do login e o isolamento entre duas contas reais exigem essa validação autenticada; os testes existentes verificam esses fluxos com serviços simulados.
 
 ## Banco de questões
 

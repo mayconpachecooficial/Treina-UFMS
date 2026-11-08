@@ -1,6 +1,6 @@
 import type { Topic } from "../types";
-// Transcrição das duas imagens fornecidas. A numeração de Português é editorial;
-// os títulos preservam a redação do Anexo V. As imagens não têm página visível.
+// Títulos cotejados com o PDF integral do Edital Progep/UFMS nº 152/2026.
+// A numeração de Português é editorial; IDs preservados para manter o progresso.
 const pt = [
   "Compreensão e interpretação de textos.",
   "Gêneros e tipos textuais.",
@@ -50,7 +50,7 @@ const leg = [
   ],
   [
     "leg-etica",
-    "Código de Ética Profissional dos Servidores da UFMS (Resolução nº 426-Coun/UFMS, de 1º de abril de 2026, https://boletimoficial.ufms.br/ato-conteudo-normativo?pid=593987).",
+    "Código de Ética Profissional dos Servidores da UFMS (Resolução nº 426-Coun/UFMS, de 1° de abril de 2026, https://boletimoficial.ufms.br/ato-conteudo-normativo?pid=593987).",
   ],
 ];
 const esp = [
@@ -79,21 +79,21 @@ export const topics: Topic[] = [
     subject: "portugues" as const,
     title,
     sourcePage:
-      "Imagem 177595.jpg · Língua Portuguesa · sem numeração de página visível",
+      "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29 · Língua Portuguesa",
   })),
   ...leg.map(([id, title]) => ({
     id,
     subject: "legislacao" as const,
     title,
     sourcePage:
-      "Imagem 177595.jpg · Legislação · sem numeração de página visível",
+      "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29 · Legislação",
   })),
   ...esp.map((title, i) => ({
     id: `esp-${String(i + 1).padStart(2, "0")}`,
     subject: "especificos" as const,
     title,
     sourcePage:
-      "Imagem 187849.jpg · cargo código 502 · sem numeração de página visível",
+      "Edital Progep/UFMS nº 152/2026 · Anexo V · página 30 · cargo 502",
   })),
 ];
 export const additionalSyllabus = [

@@ -152,3 +152,21 @@ test("reinício pede confirmação e limpa respostas", async () => {
   await act(async () => {});
   expect(JSON.parse(localStorage.getItem(STORAGE_KEY)!).answers).toEqual({});
 });
+
+test("identifica o simulado de três áreas como treino parcial da prova", async () => {
+  render(<App />);
+  await waitFor(() =>
+    expect(screen.getByText("Salvo neste navegador")).toBeTruthy(),
+  );
+  fireEvent.click(screen.getByRole("button", { name: "Simulados" }));
+  expect(screen.getByText("Treino parcial das três matérias")).toBeTruthy();
+  fireEvent.click(
+    screen.getByRole("button", { name: "Ver composição da prova" }),
+  );
+  expect(
+    screen.getByRole("table", { name: "Composição oficial da prova objetiva" }),
+  ).toBeTruthy();
+  expect(screen.getByText("Língua Inglesa")).toBeTruthy();
+  expect(screen.getByText("Raciocínio Lógico")).toBeTruthy();
+  expect(screen.getAllByText("Sem questões cadastradas")).toHaveLength(2);
+});

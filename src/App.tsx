@@ -32,6 +32,7 @@ import {
   XCircle,
 } from "lucide-react";
 import { bank } from "./data";
+import { exam } from "./data/exam";
 import { additionalSyllabus } from "./data/topics";
 import { subjects, type Question, type Subject } from "./types";
 import {
@@ -1029,6 +1030,26 @@ function App() {
                   )}
                 </>
               )}
+              {page === "simulado" && (
+                <div className="notice-panel" role="note">
+                  <FileCheck2 size={24} />
+                  <div>
+                    <h2>Treino parcial das três matérias</h2>
+                    <p>
+                      A prova do edital tem 60 questões em cinco áreas. Este
+                      treino reúne Português, Legislação e Específicos; Inglês e
+                      Raciocínio Lógico ainda não têm questões. O percentual
+                      deste treino não corresponde à nota oficial de 100 pontos.
+                    </p>
+                    <button
+                      className="text-button"
+                      onClick={() => go("edital")}
+                    >
+                      Ver composição da prova <ArrowRight size={15} />
+                    </button>
+                  </div>
+                </div>
+              )}
               {page === "simulado" &&
                 (() => {
                   const sim = progress.simulation;
@@ -1333,7 +1354,9 @@ function App() {
                       <h2>
                         {bank.source.status === "pending"
                           ? "Precisamos do edital para traçar o mapa."
-                          : "Anexo V transcrito das imagens recebidas"}
+                          : bank.source.fullEditalReceived
+                            ? "Edital completo conferido · Anexo V"
+                            : "Anexo V transcrito das imagens recebidas"}
                       </h2>
                       <p>
                         {bank.source.status === "pending"
@@ -1352,6 +1375,63 @@ function App() {
                       {note}
                     </div>
                   ))}
+                  <section className="panel coverage">
+                    <div className="panel-heading">
+                      <div>
+                        <h2>Como é a prova do edital</h2>
+                        <p>
+                          Itens 9.1 e 9.2, página 8; itens 10.1 e 10.2, página
+                          10.
+                        </p>
+                      </div>
+                    </div>
+                    <div className="table-scroll">
+                      <table>
+                        <caption className="sr-only">
+                          Composição oficial da prova objetiva
+                        </caption>
+                        <thead>
+                          <tr>
+                            <th>Área</th>
+                            <th>Questões na prova</th>
+                            <th>Pontos máximos</th>
+                            <th>Banco nesta plataforma</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {exam.areas.map((area) => (
+                            <tr key={area.name}>
+                              <td>
+                                <strong>{area.name}</strong>
+                              </td>
+                              <td>{area.questions}</td>
+                              <td>{area.points}</td>
+                              <td>
+                                {area.available
+                                  ? "Disponível"
+                                  : "Sem questões cadastradas"}
+                              </td>
+                            </tr>
+                          ))}
+                          <tr>
+                            <td>
+                              <strong>Total da prova</strong>
+                            </td>
+                            <td>{exam.totalQuestions}</td>
+                            <td>{exam.totalPoints}</td>
+                            <td>Cobertura atual: três das cinco áreas</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <p className="muted">
+                      Duração: {exam.durationHours} horas, incluindo o cartão de
+                      respostas. Mínimo de {exam.minimumPercentage}% dos pontos;
+                      nota zero em qualquer área elimina. O treino parcial não
+                      calcula aprovação no concurso.
+                    </p>
+                  </section>
+                  <div className="section-subtitle" />
                   <section className="panel coverage">
                     <div className="panel-heading">
                       <div>
