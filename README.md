@@ -18,7 +18,7 @@ A prova oficial contém **60 questões e 100 pontos**: Português 15/15; Inglês
 
 Em 8/11/2026, a Vercel confirmou a implantação do commit `e112c794306f78db4a0c87ec1b39dacaf54bc6a1`; o endereço público respondeu HTTP 200 com o título da plataforma. O projeto Supabase `nmswkgugitppfebxjllf` está configurado na versão publicada: sua API de autenticação respondeu HTTP 200, o provedor de e-mail está habilitado e a tabela `study_progress` existe, com acesso anônimo negado. Nenhum registro de usuário foi lido durante essa verificação.
 
-Os 22 testes automatizados passaram, inclusive recuperação diante de URL inválida do Supabase. Uma instalação limpa também compilou com Node.js 22. A entrada por link de e-mail e a gravação na nuvem com uma conta autenticada ainda não foram verificadas de ponta a ponta. As regras de retorno do login e o isolamento entre duas contas reais exigem essa validação autenticada; os testes existentes verificam esses fluxos com serviços simulados.
+Os 24 testes automatizados passaram, inclusive recuperação diante de URL inválida do Supabase. Uma instalação limpa também compilou com Node.js 22. A entrada por link de e-mail e a gravação na nuvem com uma conta autenticada ainda não foram verificadas de ponta a ponta. As regras de retorno do login e o isolamento entre duas contas reais exigem essa validação autenticada; os testes existentes verificam esses fluxos com serviços simulados.
 
 ## Banco de questões
 
@@ -147,3 +147,9 @@ Uma configuração incompleta ou uma URL inválida do Supabase não impede a abe
 Marcar uma alternativa cria uma seleção provisória. Ela pode ser trocada antes de clicar em **Responder** e ainda não conta como tentativa. No estudo por assunto, confirmar exibe o comentário e registra a resposta no progresso. No simulado, confirmar registra a resposta e o gabarito continua reservado ao final.
 
 Os botões **Anterior** e **Próxima** mantêm a sequência iniciada, inclusive quando uma resposta altera a situação da questão no filtro Não respondidas ou Erradas. Trocar filtros inicia outra sequência. Seleções provisórias são mantidas durante a navegação enquanto a página permanece aberta; somente respostas confirmadas são salvas no navegador e sincronizadas com a conta. Refazer permite uma nova tentativa sem apagar o histórico anterior.
+
+## Contas para amigos e novos participantes
+
+Novos cadastros por e-mail estavam habilitados na consulta pública às configurações do Supabase. A tela **Entrar ou criar conta** permite a cada pessoa solicitar seu próprio link; `shouldCreateUser: true` explicita o cadastro no primeiro acesso, respeitando a configuração do servidor. Não há necessidade de o proprietário cadastrar respostas ou criar linhas manualmente em `study_progress`: o usuário autenticado recebe sua linha quando o progresso é sincronizado. As políticas continuam limitando cada conta ao seu próprio `user_id`.
+
+O envio real para e-mails externos não foi testado. Se o projeto ainda usa o serviço SMTP padrão do Supabase, o envio é restrito aos endereços da equipe do projeto. Para participantes externos, configure SMTP próprio conforme a [documentação oficial](https://supabase.com/docs/guides/auth/auth-smtp). Isso é uma configuração do serviço; habilitar cadastros, por si só, não confirma que os e-mails externos possam ser entregues. O aplicativo explica a restrição quando o servidor retorna `email_address_not_authorized` e não apresenta um cadastro como concluído nesse caso.

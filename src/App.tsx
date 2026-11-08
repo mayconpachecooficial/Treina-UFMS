@@ -321,14 +321,31 @@ function App() {
     setAuthMessage("");
     try {
       const { error } = await supabase.auth.signInWithOtp({
-        email,
-        options: { emailRedirectTo: window.location.origin },
+        email: email.trim(),
+        options: {
+          emailRedirectTo: window.location.origin,
+          shouldCreateUser: true,
+        },
       });
-      setAuthMessage(
-        error
-          ? "Não foi possível enviar o link. Confira o e-mail e a configuração do Supabase."
-          : "Link enviado! Confira sua caixa de entrada e abra o link para entrar.",
-      );
+      if (error?.code === "email_address_not_authorized") {
+        setAuthMessage(
+          "O serviço de e-mail ainda não autoriza este destinatário. O responsável pelo site precisa configurar o envio de e-mails no Supabase para receber novos participantes.",
+        );
+      } else if (error?.code === "over_email_send_rate_limit") {
+        setAuthMessage(
+          "O limite de envio de e-mails foi atingido. Aguarde antes de solicitar outro link.",
+        );
+      } else if (error?.code === "signup_disabled") {
+        setAuthMessage(
+          "O cadastro de novas contas está desativado no Supabase. O responsável pelo site precisa habilitá-lo.",
+        );
+      } else {
+        setAuthMessage(
+          error
+            ? "Não foi possível enviar o link. Confira o e-mail e tente novamente."
+            : "Link enviado! Confira sua caixa de entrada e abra o link para confirmar o acesso. Se for sua primeira vez, você poderá ativar sua própria conta.",
+        );
+      }
     } catch {
       setAuthMessage("Falha de conexão. Tente novamente.");
     } finally {
@@ -453,7 +470,7 @@ function App() {
             </span>
             <button
               className="icon-button"
-              aria-label={user ? "Sair da conta" : "Entrar na conta"}
+              aria-label={user ? "Sair da conta" : "Entrar ou criar conta"}
               onClick={async () => {
                 if (user) {
                   const result = await supabase?.auth.signOut();
@@ -1547,8 +1564,9 @@ function App() {
                     <Cloud size={27} />
                     <h2>Seu estudo acompanha você.</h2>
                     <p>
-                      Entre por e-mail para salvar respostas, revisão e o ponto
-                      onde parou no Supabase.
+                      Entre com seu próprio e-mail para salvar respostas,
+                      revisão e o ponto onde parou. No primeiro acesso, você
+                      pode criar sua conta.
                     </p>
                     <div className="connection-state">
                       <span
@@ -1576,12 +1594,13 @@ function App() {
                         className="button primary"
                         onClick={() => setAuthOpen(true)}
                       >
-                        <LogIn size={17} /> Entrar na minha conta
+                        <LogIn size={17} /> Entrar ou criar conta
                       </button>
                     )}
                     <p className="settings-note">
-                      Sem conta, o progresso fica neste navegador. Com conta,
-                      cada usuário tem um histórico separado. Em vários
+                      Compartilhe o endereço do site com seus amigos: cada
+                      pessoa usa o próprio e-mail e tem um histórico separado.
+                      Sem conta, o progresso fica neste navegador. Em vários
                       dispositivos, prevalece a versão mais recente ao entrar ou
                       sincronizar.
                     </p>
@@ -1697,12 +1716,14 @@ function App() {
               <span className="large-icon">
                 <Cloud size={30} />
               </span>
-              <h2>Seu progresso, em qualquer lugar.</h2>
+              <h2>Entre ou crie sua conta.</h2>
               {supabase ? (
                 <form onSubmit={signIn}>
                   <p>
-                    Receba um link seguro no seu e-mail. Sem precisar criar uma
-                    senha.
+                    Use seu próprio e-mail para receber um link seguro, sem
+                    senha. Se for seu primeiro acesso, você poderá criar sua
+                    conta. Suas respostas e seu progresso ficam separados dos
+                    outros participantes.
                   </p>
                   <label>
                     E-mail
