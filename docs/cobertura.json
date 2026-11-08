@@ -1,0 +1,1957 @@
+{
+  "fonte": {
+    "status": "verified",
+    "title": "Anexo V — Edital Progep/UFMS nº 152, de 29 de outubro de 2026",
+    "version": "Transcrição das imagens 177595.jpg e 187849.jpg",
+    "verifiedAt": "2026-11-07",
+    "fullEditalReceived": false,
+    "notes": [
+      "O edital completo não foi fornecido; a transcrição cobre as duas imagens recebidas.",
+      "Divergência: a imagem indica Resolução nº 426-Coun/UFMS; o PDF oficial no link do anexo é a Resolução nº 496-COUN/UFMS, de 1º de abril de 2026. As questões do Código de Ética usam o PDF oficial; a numeração precisa de conferência no edital original/retificação.",
+      "A versão aplicável das normas ainda depende das regras temporais do edital completo.",
+      "Cinco questões práticas de eMAG 2.0 aguardam a conferência da cartilha histórica e não entram nos treinos. A cobertura liberada desse tópico se baseia na seção histórica oficial do eMAG 3.1, que descreve a versão 2.0."
+    ]
+  },
+  "totais": [
+    {
+      "materia": "Língua Portuguesa",
+      "criadas": 85,
+      "liberadas": 85
+    },
+    {
+      "materia": "Legislação",
+      "criadas": 81,
+      "liberadas": 81
+    },
+    {
+      "materia": "Conhecimentos Específicos",
+      "criadas": 102,
+      "liberadas": 97
+    }
+  ],
+  "assuntos": [
+    {
+      "titulo": "Compreensão e interpretação de textos.",
+      "origem": "Imagem 177595.jpg · Língua Portuguesa · sem numeração de página visível",
+      "materia": "Língua Portuguesa",
+      "questoes": [
+        {
+          "id": "pt-001",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": null
+        },
+        {
+          "id": "pt-002",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": null
+        },
+        {
+          "id": "pt-003",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": null
+        },
+        {
+          "id": "pt-004",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": null
+        },
+        {
+          "id": "pt-005",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": null
+        }
+      ]
+    },
+    {
+      "titulo": "Gêneros e tipos textuais.",
+      "origem": "Imagem 177595.jpg · Língua Portuguesa · sem numeração de página visível",
+      "materia": "Língua Portuguesa",
+      "questoes": [
+        {
+          "id": "pt-006",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": null
+        },
+        {
+          "id": "pt-007",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": null
+        },
+        {
+          "id": "pt-008",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": null
+        },
+        {
+          "id": "pt-009",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": null
+        }
+      ]
+    },
+    {
+      "titulo": "Funções da linguagem.",
+      "origem": "Imagem 177595.jpg · Língua Portuguesa · sem numeração de página visível",
+      "materia": "Língua Portuguesa",
+      "questoes": [
+        {
+          "id": "pt-010",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": null
+        },
+        {
+          "id": "pt-011",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": null
+        },
+        {
+          "id": "pt-012",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": null
+        },
+        {
+          "id": "pt-013",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": null
+        }
+      ]
+    },
+    {
+      "titulo": "Coesão e coerência textual.",
+      "origem": "Imagem 177595.jpg · Língua Portuguesa · sem numeração de página visível",
+      "materia": "Língua Portuguesa",
+      "questoes": [
+        {
+          "id": "pt-014",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": null
+        },
+        {
+          "id": "pt-015",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": null
+        },
+        {
+          "id": "pt-016",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": null
+        },
+        {
+          "id": "pt-017",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": null
+        }
+      ]
+    },
+    {
+      "titulo": "Significação de palavras e expressões: sinonímia, antonímia, polissemia, paronímia, homonímia e formas variantes.",
+      "origem": "Imagem 177595.jpg · Língua Portuguesa · sem numeração de página visível",
+      "materia": "Língua Portuguesa",
+      "questoes": [
+        {
+          "id": "pt-018",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": null
+        },
+        {
+          "id": "pt-019",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": null
+        },
+        {
+          "id": "pt-020",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": null
+        },
+        {
+          "id": "pt-021",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": null
+        },
+        {
+          "id": "pt-082",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": null
+        },
+        {
+          "id": "pt-083",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": null
+        },
+        {
+          "id": "pt-084",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": null
+        }
+      ]
+    },
+    {
+      "titulo": "Sentido próprio e figurado das palavras.",
+      "origem": "Imagem 177595.jpg · Língua Portuguesa · sem numeração de página visível",
+      "materia": "Língua Portuguesa",
+      "questoes": [
+        {
+          "id": "pt-022",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": null
+        },
+        {
+          "id": "pt-023",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": null
+        },
+        {
+          "id": "pt-024",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": null
+        },
+        {
+          "id": "pt-025",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": null
+        }
+      ]
+    },
+    {
+      "titulo": "Ortografia oficial, incluindo emprego das letras, do hífen e de letras maiúsculas e minúsculas, conforme o Acordo Ortográfico da Língua Portuguesa.",
+      "origem": "Imagem 177595.jpg · Língua Portuguesa · sem numeração de página visível",
+      "materia": "Língua Portuguesa",
+      "questoes": [
+        {
+          "id": "pt-026",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": null
+        },
+        {
+          "id": "pt-027",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": null
+        },
+        {
+          "id": "pt-028",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": null
+        },
+        {
+          "id": "pt-029",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": null
+        }
+      ]
+    },
+    {
+      "titulo": "Acentuação gráfica.",
+      "origem": "Imagem 177595.jpg · Língua Portuguesa · sem numeração de página visível",
+      "materia": "Língua Portuguesa",
+      "questoes": [
+        {
+          "id": "pt-030",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": null
+        },
+        {
+          "id": "pt-031",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": null
+        },
+        {
+          "id": "pt-032",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": null
+        },
+        {
+          "id": "pt-033",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": null
+        }
+      ]
+    },
+    {
+      "titulo": "Classes de palavras: identificação, classificação, flexão e emprego.",
+      "origem": "Imagem 177595.jpg · Língua Portuguesa · sem numeração de página visível",
+      "materia": "Língua Portuguesa",
+      "questoes": [
+        {
+          "id": "pt-034",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": null
+        },
+        {
+          "id": "pt-035",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": null
+        },
+        {
+          "id": "pt-036",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": null
+        },
+        {
+          "id": "pt-037",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": null
+        },
+        {
+          "id": "pt-085",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": null
+        }
+      ]
+    },
+    {
+      "titulo": "Estrutura e formação de palavras.",
+      "origem": "Imagem 177595.jpg · Língua Portuguesa · sem numeração de página visível",
+      "materia": "Língua Portuguesa",
+      "questoes": [
+        {
+          "id": "pt-038",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": null
+        },
+        {
+          "id": "pt-039",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": null
+        },
+        {
+          "id": "pt-040",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": null
+        },
+        {
+          "id": "pt-041",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": null
+        }
+      ]
+    },
+    {
+      "titulo": "Sintaxe da oração e do período.",
+      "origem": "Imagem 177595.jpg · Língua Portuguesa · sem numeração de página visível",
+      "materia": "Língua Portuguesa",
+      "questoes": [
+        {
+          "id": "pt-042",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": null
+        },
+        {
+          "id": "pt-043",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": null
+        },
+        {
+          "id": "pt-044",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": null
+        },
+        {
+          "id": "pt-045",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": null
+        }
+      ]
+    },
+    {
+      "titulo": "Termos essenciais, integrantes e acessórios da oração.",
+      "origem": "Imagem 177595.jpg · Língua Portuguesa · sem numeração de página visível",
+      "materia": "Língua Portuguesa",
+      "questoes": [
+        {
+          "id": "pt-046",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": null
+        },
+        {
+          "id": "pt-047",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": null
+        },
+        {
+          "id": "pt-048",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": null
+        },
+        {
+          "id": "pt-049",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": null
+        }
+      ]
+    },
+    {
+      "titulo": "Período composto por coordenação e subordinação.",
+      "origem": "Imagem 177595.jpg · Língua Portuguesa · sem numeração de página visível",
+      "materia": "Língua Portuguesa",
+      "questoes": [
+        {
+          "id": "pt-050",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": null
+        },
+        {
+          "id": "pt-051",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": null
+        },
+        {
+          "id": "pt-052",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": null
+        },
+        {
+          "id": "pt-053",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": null
+        }
+      ]
+    },
+    {
+      "titulo": "Orações reduzidas.",
+      "origem": "Imagem 177595.jpg · Língua Portuguesa · sem numeração de página visível",
+      "materia": "Língua Portuguesa",
+      "questoes": [
+        {
+          "id": "pt-054",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": null
+        },
+        {
+          "id": "pt-055",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": null
+        },
+        {
+          "id": "pt-056",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": null
+        },
+        {
+          "id": "pt-057",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": null
+        }
+      ]
+    },
+    {
+      "titulo": "Concordância verbal e nominal.",
+      "origem": "Imagem 177595.jpg · Língua Portuguesa · sem numeração de página visível",
+      "materia": "Língua Portuguesa",
+      "questoes": [
+        {
+          "id": "pt-058",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": null
+        },
+        {
+          "id": "pt-059",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": null
+        },
+        {
+          "id": "pt-060",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": null
+        },
+        {
+          "id": "pt-061",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": null
+        }
+      ]
+    },
+    {
+      "titulo": "Regência verbal e nominal.",
+      "origem": "Imagem 177595.jpg · Língua Portuguesa · sem numeração de página visível",
+      "materia": "Língua Portuguesa",
+      "questoes": [
+        {
+          "id": "pt-062",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": null
+        },
+        {
+          "id": "pt-063",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": null
+        },
+        {
+          "id": "pt-064",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": null
+        },
+        {
+          "id": "pt-065",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": null
+        }
+      ]
+    },
+    {
+      "titulo": "Emprego do sinal indicativo de crase.",
+      "origem": "Imagem 177595.jpg · Língua Portuguesa · sem numeração de página visível",
+      "materia": "Língua Portuguesa",
+      "questoes": [
+        {
+          "id": "pt-066",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": null
+        },
+        {
+          "id": "pt-067",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": null
+        },
+        {
+          "id": "pt-068",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": null
+        },
+        {
+          "id": "pt-069",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": null
+        }
+      ]
+    },
+    {
+      "titulo": "Emprego dos tempos e modos verbais.",
+      "origem": "Imagem 177595.jpg · Língua Portuguesa · sem numeração de página visível",
+      "materia": "Língua Portuguesa",
+      "questoes": [
+        {
+          "id": "pt-070",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": null
+        },
+        {
+          "id": "pt-071",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": null
+        },
+        {
+          "id": "pt-072",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": null
+        },
+        {
+          "id": "pt-073",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": null
+        }
+      ]
+    },
+    {
+      "titulo": "Colocação pronominal.",
+      "origem": "Imagem 177595.jpg · Língua Portuguesa · sem numeração de página visível",
+      "materia": "Língua Portuguesa",
+      "questoes": [
+        {
+          "id": "pt-074",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": null
+        },
+        {
+          "id": "pt-075",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": null
+        },
+        {
+          "id": "pt-076",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": null
+        },
+        {
+          "id": "pt-077",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": null
+        }
+      ]
+    },
+    {
+      "titulo": "Pontuação.",
+      "origem": "Imagem 177595.jpg · Língua Portuguesa · sem numeração de página visível",
+      "materia": "Língua Portuguesa",
+      "questoes": [
+        {
+          "id": "pt-078",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": null
+        },
+        {
+          "id": "pt-079",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": null
+        },
+        {
+          "id": "pt-080",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": null
+        },
+        {
+          "id": "pt-081",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": null
+        }
+      ]
+    },
+    {
+      "titulo": "Constituição da República Federativa do Brasil de 1988: Administração Pública (arts. 37 a 41).",
+      "origem": "Imagem 177595.jpg · Legislação · sem numeração de página visível",
+      "materia": "Legislação",
+      "questoes": [
+        {
+          "id": "lei-001",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "CF/1988, art.37,§1º · https://www2.camara.leg.br/legin/fed/consti/1988/constituicao-1988-5-outubro-1988-322142-normaatualizada-pl.html"
+        },
+        {
+          "id": "lei-002",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "CF/1988, art.37,V · https://www2.camara.leg.br/legin/fed/consti/1988/constituicao-1988-5-outubro-1988-322142-normaatualizada-pl.html"
+        },
+        {
+          "id": "lei-003",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "CF/1988, art.37,III · https://www2.camara.leg.br/legin/fed/consti/1988/constituicao-1988-5-outubro-1988-322142-normaatualizada-pl.html"
+        },
+        {
+          "id": "lei-004",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "CF/1988, art.37,IX · https://www2.camara.leg.br/legin/fed/consti/1988/constituicao-1988-5-outubro-1988-322142-normaatualizada-pl.html"
+        },
+        {
+          "id": "lei-005",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "CF/1988, art.37,X e XIII · https://www2.camara.leg.br/legin/fed/consti/1988/constituicao-1988-5-outubro-1988-322142-normaatualizada-pl.html"
+        },
+        {
+          "id": "lei-006",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "CF/1988, art.37,XVI,b, redação da EC138/2025 · https://www2.camara.leg.br/legin/fed/consti/1988/constituicao-1988-5-outubro-1988-322142-normaatualizada-pl.html"
+        },
+        {
+          "id": "lei-007",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "CF/1988, art.37,XIX · https://www2.camara.leg.br/legin/fed/consti/1988/constituicao-1988-5-outubro-1988-322142-normaatualizada-pl.html"
+        },
+        {
+          "id": "lei-008",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "CF/1988, art.37,§6º · https://www2.camara.leg.br/legin/fed/consti/1988/constituicao-1988-5-outubro-1988-322142-normaatualizada-pl.html"
+        },
+        {
+          "id": "lei-009",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "CF/1988, art.37,§13 · https://www2.camara.leg.br/legin/fed/consti/1988/constituicao-1988-5-outubro-1988-322142-normaatualizada-pl.html"
+        },
+        {
+          "id": "lei-010",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "CF/1988, art.38,III · https://www2.camara.leg.br/legin/fed/consti/1988/constituicao-1988-5-outubro-1988-322142-normaatualizada-pl.html"
+        },
+        {
+          "id": "lei-011",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "CF/1988, art.39,§9º · https://www2.camara.leg.br/legin/fed/consti/1988/constituicao-1988-5-outubro-1988-322142-normaatualizada-pl.html"
+        },
+        {
+          "id": "lei-012",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "CF/1988, art.40,caput · https://www2.camara.leg.br/legin/fed/consti/1988/constituicao-1988-5-outubro-1988-322142-normaatualizada-pl.html"
+        },
+        {
+          "id": "lei-013",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "CF/1988, art.40,§13 · https://www2.camara.leg.br/legin/fed/consti/1988/constituicao-1988-5-outubro-1988-322142-normaatualizada-pl.html"
+        },
+        {
+          "id": "lei-014",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "CF/1988, art.41,caput e §4º · https://www2.camara.leg.br/legin/fed/consti/1988/constituicao-1988-5-outubro-1988-322142-normaatualizada-pl.html"
+        }
+      ]
+    },
+    {
+      "titulo": "Regime Jurídico dos Servidores Públicos Civis da União, das Autarquias e das Fundações Públicas Federais (Lei nº 8.112, de 11 de dezembro de 1990, e suas alterações).",
+      "origem": "Imagem 177595.jpg · Legislação · sem numeração de página visível",
+      "materia": "Legislação",
+      "questoes": [
+        {
+          "id": "lei-015",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Lei8.112/1990, arts.7º e15 · https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html"
+        },
+        {
+          "id": "lei-016",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Lei8.112/1990, art.13,§6º · https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html"
+        },
+        {
+          "id": "lei-017",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Lei8.112/1990, art.15,§2º · https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html"
+        },
+        {
+          "id": "lei-018",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Lei8.112/1990, art.24 · https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html"
+        },
+        {
+          "id": "lei-019",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Lei8.112/1990, art.28 · https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html"
+        },
+        {
+          "id": "lei-020",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Lei8.112/1990, art.29,I · https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html"
+        },
+        {
+          "id": "lei-021",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Lei8.112/1990, arts.36 e37 · https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html"
+        },
+        {
+          "id": "lei-022",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Lei8.112/1990, art.49,§1º · https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html"
+        },
+        {
+          "id": "lei-023",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Lei8.112/1990, art.58,§1º · https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html"
+        },
+        {
+          "id": "lei-024",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Lei8.112/1990, art.77,§2º · https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html"
+        },
+        {
+          "id": "lei-025",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Lei8.112/1990, art.116,IV eVI · https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html"
+        },
+        {
+          "id": "lei-026",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Lei8.112/1990, art.117,XII · https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html"
+        },
+        {
+          "id": "lei-027",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Lei8.112/1990, arts.125 e126 · https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html"
+        },
+        {
+          "id": "lei-028",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Lei8.112/1990, art.128 · https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html"
+        },
+        {
+          "id": "lei-029",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Lei8.112/1990, art.149,caput · https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html"
+        },
+        {
+          "id": "lei-030",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Lei8.112/1990, arts.174,176 e182,parágrafo único · https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html"
+        }
+      ]
+    },
+    {
+      "titulo": "Processo Administrativo no âmbito da Administração Pública Federal (Lei nº 9.784, de 29 de janeiro de 1999, e suas alterações).",
+      "origem": "Imagem 177595.jpg · Legislação · sem numeração de página visível",
+      "materia": "Legislação",
+      "questoes": [
+        {
+          "id": "lei-031",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Lei9.784/1999, art.1º,§1º · https://www2.camara.leg.br/legin/fed/lei/1999/lei-9784-29-janeiro-1999-322239-normaatualizada-pl.html"
+        },
+        {
+          "id": "lei-032",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Lei9.784/1999, art.2º,parágrafo único,XIII · https://www2.camara.leg.br/legin/fed/lei/1999/lei-9784-29-janeiro-1999-322239-normaatualizada-pl.html"
+        },
+        {
+          "id": "lei-033",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Lei9.784/1999, art.3º,IV · https://www2.camara.leg.br/legin/fed/lei/1999/lei-9784-29-janeiro-1999-322239-normaatualizada-pl.html"
+        },
+        {
+          "id": "lei-034",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Lei9.784/1999, art.6º,parágrafo único · https://www2.camara.leg.br/legin/fed/lei/1999/lei-9784-29-janeiro-1999-322239-normaatualizada-pl.html"
+        },
+        {
+          "id": "lei-035",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Lei9.784/1999, art.13,II · https://www2.camara.leg.br/legin/fed/lei/1999/lei-9784-29-janeiro-1999-322239-normaatualizada-pl.html"
+        },
+        {
+          "id": "lei-036",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Lei9.784/1999, art.15 · https://www2.camara.leg.br/legin/fed/lei/1999/lei-9784-29-janeiro-1999-322239-normaatualizada-pl.html"
+        },
+        {
+          "id": "lei-037",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Lei9.784/1999, arts.18,I e19 · https://www2.camara.leg.br/legin/fed/lei/1999/lei-9784-29-janeiro-1999-322239-normaatualizada-pl.html"
+        },
+        {
+          "id": "lei-038",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Lei9.784/1999, art.26,§5º · https://www2.camara.leg.br/legin/fed/lei/1999/lei-9784-29-janeiro-1999-322239-normaatualizada-pl.html"
+        },
+        {
+          "id": "lei-039",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Lei9.784/1999, art.27 · https://www2.camara.leg.br/legin/fed/lei/1999/lei-9784-29-janeiro-1999-322239-normaatualizada-pl.html"
+        },
+        {
+          "id": "lei-040",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Lei9.784/1999, arts.48 e49 · https://www2.camara.leg.br/legin/fed/lei/1999/lei-9784-29-janeiro-1999-322239-normaatualizada-pl.html"
+        },
+        {
+          "id": "lei-041",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Lei9.784/1999, art.50,§1º · https://www2.camara.leg.br/legin/fed/lei/1999/lei-9784-29-janeiro-1999-322239-normaatualizada-pl.html"
+        },
+        {
+          "id": "lei-042",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Lei9.784/1999, art.54,caput e§2º · https://www2.camara.leg.br/legin/fed/lei/1999/lei-9784-29-janeiro-1999-322239-normaatualizada-pl.html"
+        },
+        {
+          "id": "lei-043",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Lei9.784/1999, art.55 · https://www2.camara.leg.br/legin/fed/lei/1999/lei-9784-29-janeiro-1999-322239-normaatualizada-pl.html"
+        },
+        {
+          "id": "lei-044",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Lei9.784/1999, arts.59 e61 · https://www2.camara.leg.br/legin/fed/lei/1999/lei-9784-29-janeiro-1999-322239-normaatualizada-pl.html"
+        },
+        {
+          "id": "lei-045",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Lei9.784/1999, arts.64,parágrafo único, e65 · https://www2.camara.leg.br/legin/fed/lei/1999/lei-9784-29-janeiro-1999-322239-normaatualizada-pl.html"
+        }
+      ]
+    },
+    {
+      "titulo": "Marco Legal de Ciência, Tecnologia e Inovação (Decreto nº 9.283, de 7 de fevereiro de 2018, e suas alterações).",
+      "origem": "Imagem 177595.jpg · Legislação · sem numeração de página visível",
+      "materia": "Legislação",
+      "questoes": [
+        {
+          "id": "lei-046",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Decreto9.283/2018, art.2º,III · https://www2.camara.leg.br/legin/fed/decret/2018/decreto-9283-7-fevereiro-2018-786162-publicacaooriginal-154848-pe.html"
+        },
+        {
+          "id": "lei-047",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Decreto9.283/2018, art.2º,II,b · https://www2.camara.leg.br/legin/fed/decret/2018/decreto-9283-7-fevereiro-2018-786162-publicacaooriginal-154848-pe.html"
+        },
+        {
+          "id": "lei-048",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Decreto9.283/2018, art.3º,§2º · https://www2.camara.leg.br/legin/fed/decret/2018/decreto-9283-7-fevereiro-2018-786162-publicacaooriginal-154848-pe.html"
+        },
+        {
+          "id": "lei-049",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Decreto9.283/2018, art.4º,caput · https://www2.camara.leg.br/legin/fed/decret/2018/decreto-9283-7-fevereiro-2018-786162-publicacaooriginal-154848-pe.html"
+        },
+        {
+          "id": "lei-050",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Decreto9.283/2018, art.12,§1º · https://www2.camara.leg.br/legin/fed/decret/2018/decreto-9283-7-fevereiro-2018-786162-publicacaooriginal-154848-pe.html"
+        },
+        {
+          "id": "lei-051",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Decreto9.283/2018, art.14,§3º · https://www2.camara.leg.br/legin/fed/decret/2018/decreto-9283-7-fevereiro-2018-786162-publicacaooriginal-154848-pe.html"
+        },
+        {
+          "id": "lei-052",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Decreto9.283/2018, art.27,§3º · https://www2.camara.leg.br/legin/fed/decret/2018/decreto-9283-7-fevereiro-2018-786162-publicacaooriginal-154848-pe.html"
+        },
+        {
+          "id": "lei-053",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Decreto9.283/2018, art.35,caput e§§1º e2º · https://www2.camara.leg.br/legin/fed/decret/2018/decreto-9283-7-fevereiro-2018-786162-publicacaooriginal-154848-pe.html"
+        },
+        {
+          "id": "lei-054",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Decreto9.283/2018, art.58,§6º · https://www2.camara.leg.br/legin/fed/decret/2018/decreto-9283-7-fevereiro-2018-786162-publicacaooriginal-154848-pe.html"
+        }
+      ]
+    },
+    {
+      "titulo": "Estatuto da Universidade Federal de Mato Grosso do Sul (Resolução nº 93-Coun/UFMS, de 28 de maio de 2021 - https://boletimoficial.ufms.br/ato-conteudo-normativo?pid=426373).",
+      "origem": "Imagem 177595.jpg · Legislação · sem numeração de página visível",
+      "materia": "Legislação",
+      "questoes": [
+        {
+          "id": "lei-055",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Estatuto UFMS, anexo à Resolução93-Coun/UFMS/2021, art.1º · https://boletimoficial.ufms.br/ato-conteudo-normativo?pid=426373"
+        },
+        {
+          "id": "lei-056",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Estatuto UFMS, art.1º,§3º · https://boletimoficial.ufms.br/ato-conteudo-normativo?pid=426373"
+        },
+        {
+          "id": "lei-057",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Estatuto UFMS, art.2º,III eIV · https://boletimoficial.ufms.br/ato-conteudo-normativo?pid=426373"
+        },
+        {
+          "id": "lei-058",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Estatuto UFMS, art.3º,§1º,III · https://boletimoficial.ufms.br/ato-conteudo-normativo?pid=426373"
+        },
+        {
+          "id": "lei-059",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Estatuto UFMS, art.3º,§2º,III · https://boletimoficial.ufms.br/ato-conteudo-normativo?pid=426373"
+        },
+        {
+          "id": "lei-060",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Estatuto UFMS, art.3º,§3º,I eIII · https://boletimoficial.ufms.br/ato-conteudo-normativo?pid=426373"
+        },
+        {
+          "id": "lei-061",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Estatuto UFMS, art.4º,VII · https://boletimoficial.ufms.br/ato-conteudo-normativo?pid=426373"
+        },
+        {
+          "id": "lei-062",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Estatuto UFMS, art.5º,II · https://boletimoficial.ufms.br/ato-conteudo-normativo?pid=426373"
+        },
+        {
+          "id": "lei-063",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Estatuto UFMS, art.9º,VII · https://boletimoficial.ufms.br/ato-conteudo-normativo?pid=426373"
+        }
+      ]
+    },
+    {
+      "titulo": "Regimento Geral da Universidade Federal de Mato Grosso do Sul (Resolução nº 137-Coun/UFMS, de 29 de outubro de 2021 - https://boletimoficial.ufms.br/ato-conteudo-normativo?pid=441904).",
+      "origem": "Imagem 177595.jpg · Legislação · sem numeração de página visível",
+      "materia": "Legislação",
+      "questoes": [
+        {
+          "id": "lei-064",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Regimento Geral UFMS, anexo à Resolução137-Coun/UFMS/2021, art.2º,V · https://boletimoficial.ufms.br/ato-conteudo-normativo?pid=441904"
+        },
+        {
+          "id": "lei-065",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Regimento Geral UFMS, art.3º,VI · https://boletimoficial.ufms.br/ato-conteudo-normativo?pid=441904"
+        },
+        {
+          "id": "lei-066",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Regimento Geral UFMS, art.7º,VI eX · https://boletimoficial.ufms.br/ato-conteudo-normativo?pid=441904"
+        },
+        {
+          "id": "lei-067",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Regimento Geral UFMS, art.20,IX · https://boletimoficial.ufms.br/ato-conteudo-normativo?pid=441904"
+        },
+        {
+          "id": "lei-068",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Regimento Geral UFMS, art.27 · https://boletimoficial.ufms.br/ato-conteudo-normativo?pid=441904"
+        },
+        {
+          "id": "lei-069",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Regimento Geral UFMS, art.67,parágrafo único · https://boletimoficial.ufms.br/ato-conteudo-normativo?pid=441904"
+        },
+        {
+          "id": "lei-070",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Regimento Geral UFMS, art.68 · https://boletimoficial.ufms.br/ato-conteudo-normativo?pid=441904"
+        },
+        {
+          "id": "lei-071",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Regimento Geral UFMS, art.70,caput · https://boletimoficial.ufms.br/ato-conteudo-normativo?pid=441904"
+        },
+        {
+          "id": "lei-072",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Regimento Geral UFMS, art.73 · https://boletimoficial.ufms.br/ato-conteudo-normativo?pid=441904"
+        }
+      ]
+    },
+    {
+      "titulo": "Código de Ética Profissional dos Servidores da UFMS (Resolução nº 426-Coun/UFMS, de 1º de abril de 2026, https://boletimoficial.ufms.br/ato-conteudo-normativo?pid=593987).",
+      "origem": "Imagem 177595.jpg · Legislação · sem numeração de página visível",
+      "materia": "Legislação",
+      "questoes": [
+        {
+          "id": "lei-073",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Código de Conduta Ética UFMS, anexo à Resolução496-Coun/UFMS/2026, art.1º,parágrafo único; divergência426/496 registrada em docs/referencias-legislacao.md · https://boletimoficial.ufms.br/ato-conteudo-normativo?pid=593987"
+        },
+        {
+          "id": "lei-074",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Código de Conduta Ética UFMS, Resolução496/2026, art.3º,parágrafo único · https://boletimoficial.ufms.br/ato-conteudo-normativo?pid=593987"
+        },
+        {
+          "id": "lei-075",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Código de Conduta Ética UFMS, Resolução496/2026, art.5º,IV · https://boletimoficial.ufms.br/ato-conteudo-normativo?pid=593987"
+        },
+        {
+          "id": "lei-076",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Código de Conduta Ética UFMS, Resolução496/2026, arts.6º e7º,parágrafo único,I eV · https://boletimoficial.ufms.br/ato-conteudo-normativo?pid=593987"
+        },
+        {
+          "id": "lei-077",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Código de Conduta Ética UFMS, Resolução496/2026, art.12 · https://boletimoficial.ufms.br/ato-conteudo-normativo?pid=593987"
+        },
+        {
+          "id": "lei-078",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Código de Conduta Ética UFMS, Resolução496/2026, art.22,IV e§3º · https://boletimoficial.ufms.br/ato-conteudo-normativo?pid=593987"
+        },
+        {
+          "id": "lei-079",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Código de Conduta Ética UFMS, Resolução496/2026, art.23 · https://boletimoficial.ufms.br/ato-conteudo-normativo?pid=593987"
+        },
+        {
+          "id": "lei-080",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Código de Conduta Ética UFMS, Resolução496/2026, art.42 · https://boletimoficial.ufms.br/ato-conteudo-normativo?pid=593987"
+        },
+        {
+          "id": "lei-081",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Código de Conduta Ética UFMS, Resolução496/2026, art.45,caput e§§1º e2º · https://boletimoficial.ufms.br/ato-conteudo-normativo?pid=593987"
+        }
+      ]
+    },
+    {
+      "titulo": "1. Conhecimentos de Acessibilidade: eMAG 2.0.",
+      "origem": "Imagem 187849.jpg · cargo código 502 · sem numeração de página visível",
+      "materia": "Conhecimentos Específicos",
+      "questoes": [
+        {
+          "id": "esp-001",
+          "dificuldade": "Difícil",
+          "situacao": "Conferência documental pendente",
+          "referencia": "Fundamentos de acessibilidade; conferência documental do eMAG 2.0 pendente. Não se atribui número de recomendação à versão histórica."
+        },
+        {
+          "id": "esp-002",
+          "dificuldade": "Difícil",
+          "situacao": "Conferência documental pendente",
+          "referencia": "Fundamentos de acessibilidade; conferência documental do eMAG 2.0 pendente. Não se atribui número de recomendação à versão histórica."
+        },
+        {
+          "id": "esp-003",
+          "dificuldade": "Muito difícil",
+          "situacao": "Conferência documental pendente",
+          "referencia": "Fundamentos de acessibilidade; conferência documental do eMAG 2.0 pendente. Não se atribui número de recomendação à versão histórica."
+        },
+        {
+          "id": "esp-004",
+          "dificuldade": "Difícil",
+          "situacao": "Conferência documental pendente",
+          "referencia": "Fundamentos de acessibilidade; conferência documental do eMAG 2.0 pendente. Não se atribui número de recomendação à versão histórica."
+        },
+        {
+          "id": "esp-005",
+          "dificuldade": "Difícil",
+          "situacao": "Conferência documental pendente",
+          "referencia": "Fundamentos de acessibilidade; conferência documental do eMAG 2.0 pendente. Não se atribui número de recomendação à versão histórica."
+        },
+        {
+          "id": "esp-098",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Departamento de Governo Eletrônico, eMAG 3.1, seção 1.2 (histórico da versão 2.0): https://www.gov.br/governodigital/pt-br/acessibilidade-e-usuario/acessibilidade-digital/eMAGv31.pdf/@@download/file"
+        },
+        {
+          "id": "esp-099",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Departamento de Governo Eletrônico, eMAG 3.1, seção 1.2 (histórico da versão 2.0): https://www.gov.br/governodigital/pt-br/acessibilidade-e-usuario/acessibilidade-digital/eMAGv31.pdf/@@download/file"
+        },
+        {
+          "id": "esp-100",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Departamento de Governo Eletrônico, eMAG 3.1, seção 1.2 (histórico da versão 2.0): https://www.gov.br/governodigital/pt-br/acessibilidade-e-usuario/acessibilidade-digital/eMAGv31.pdf/@@download/file"
+        }
+      ]
+    },
+    {
+      "titulo": "2. Conhecimentos de Usabilidade e Experiência do Usuário (UX): princípios de usabilidade; design centrado no usuário; arquitetura da informação; hierarquia visual; navegação e interação; personas; jornadas do usuário; wireframes; prototipação; testes de usabilidade; avaliação heurística.",
+      "origem": "Imagem 187849.jpg · cargo código 502 · sem numeração de página visível",
+      "materia": "Conhecimentos Específicos",
+      "questoes": [
+        {
+          "id": "esp-006",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Usabilidade e UX — métodos de pesquisa, arquitetura da informação e avaliação de interfaces."
+        },
+        {
+          "id": "esp-007",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Usabilidade e UX — métodos de pesquisa, arquitetura da informação e avaliação de interfaces."
+        },
+        {
+          "id": "esp-008",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Usabilidade e UX — métodos de pesquisa, arquitetura da informação e avaliação de interfaces."
+        },
+        {
+          "id": "esp-009",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Usabilidade e UX — métodos de pesquisa, arquitetura da informação e avaliação de interfaces."
+        },
+        {
+          "id": "esp-010",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Usabilidade e UX — métodos de pesquisa, arquitetura da informação e avaliação de interfaces."
+        },
+        {
+          "id": "esp-096",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Usabilidade e UX — métodos de pesquisa, arquitetura da informação e avaliação de interfaces."
+        },
+        {
+          "id": "esp-097",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Usabilidade e UX — métodos de pesquisa, arquitetura da informação e avaliação de interfaces."
+        }
+      ]
+    },
+    {
+      "titulo": "3. Tecnologias Web, de Marcação, Apresentação e Manipulação: HTML, CSS e JavaScript.",
+      "origem": "Imagem 187849.jpg · cargo código 502 · sem numeração de página visível",
+      "materia": "Conhecimentos Específicos",
+      "questoes": [
+        {
+          "id": "esp-011",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "HTML Living Standard; CSS — box model, cascade e layout; JavaScript — DOM."
+        },
+        {
+          "id": "esp-012",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "HTML Living Standard; CSS — box model, cascade e layout; JavaScript — DOM."
+        },
+        {
+          "id": "esp-013",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "HTML Living Standard; CSS — box model, cascade e layout; JavaScript — DOM."
+        },
+        {
+          "id": "esp-014",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "HTML Living Standard; CSS — box model, cascade e layout; JavaScript — DOM."
+        },
+        {
+          "id": "esp-015",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "HTML Living Standard; CSS — box model, cascade e layout; JavaScript — DOM."
+        }
+      ]
+    },
+    {
+      "titulo": "4. Navegadores: conceitos e funcionamento.",
+      "origem": "Imagem 187849.jpg · cargo código 502 · sem numeração de página visível",
+      "materia": "Conhecimentos Específicos",
+      "questoes": [
+        {
+          "id": "esp-016",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Navegadores — política de mesma origem, renderização, cache HTTP e carregamento de recursos."
+        },
+        {
+          "id": "esp-017",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Navegadores — política de mesma origem, renderização, cache HTTP e carregamento de recursos."
+        },
+        {
+          "id": "esp-018",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Navegadores — política de mesma origem, renderização, cache HTTP e carregamento de recursos."
+        },
+        {
+          "id": "esp-019",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Navegadores — política de mesma origem, renderização, cache HTTP e carregamento de recursos."
+        },
+        {
+          "id": "esp-020",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Navegadores — política de mesma origem, renderização, cache HTTP e carregamento de recursos."
+        }
+      ]
+    },
+    {
+      "titulo": "5. Web Standards: HTML 5, CSS 3, JSON e XML.",
+      "origem": "Imagem 187849.jpg · cargo código 502 · sem numeração de página visível",
+      "materia": "Conhecimentos Específicos",
+      "questoes": [
+        {
+          "id": "esp-021",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "HTML Living Standard; CSS; RFC 8259 (JSON); XML 1.0 — boa formação e namespaces."
+        },
+        {
+          "id": "esp-022",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "HTML Living Standard; CSS; RFC 8259 (JSON); XML 1.0 — boa formação e namespaces."
+        },
+        {
+          "id": "esp-023",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "HTML Living Standard; CSS; RFC 8259 (JSON); XML 1.0 — boa formação e namespaces."
+        },
+        {
+          "id": "esp-024",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "HTML Living Standard; CSS; RFC 8259 (JSON); XML 1.0 — boa formação e namespaces."
+        },
+        {
+          "id": "esp-025",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "HTML Living Standard; CSS; RFC 8259 (JSON); XML 1.0 — boa formação e namespaces."
+        }
+      ]
+    },
+    {
+      "titulo": "6. JavaScript e Bibliotecas de Interface: fundamentos da linguagem; funções, objetos, arrays e módulos; manipulação do DOM; eventos; navegação e redirecionamento; requisições assíncronas; consumo de APIs; Vue.js; componentes e reatividade.",
+      "origem": "Imagem 187849.jpg · cargo código 502 · sem numeração de página visível",
+      "materia": "Conhecimentos Específicos",
+      "questoes": [
+        {
+          "id": "esp-026",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "ECMAScript; DOM; Fetch API; Vue 3 — componentes e reatividade."
+        },
+        {
+          "id": "esp-027",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "ECMAScript; DOM; Fetch API; Vue 3 — componentes e reatividade."
+        },
+        {
+          "id": "esp-028",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "ECMAScript; DOM; Fetch API; Vue 3 — componentes e reatividade."
+        },
+        {
+          "id": "esp-029",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "ECMAScript; DOM; Fetch API; Vue 3 — componentes e reatividade."
+        },
+        {
+          "id": "esp-030",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "ECMAScript; DOM; Fetch API; Vue 3 — componentes e reatividade."
+        },
+        {
+          "id": "esp-091",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "ECMAScript; DOM; Fetch API; Vue 3 — componentes e reatividade."
+        },
+        {
+          "id": "esp-092",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "ECMAScript; DOM; Fetch API; Vue 3 — componentes e reatividade."
+        },
+        {
+          "id": "esp-093",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "ECMAScript; DOM; Fetch API; Vue 3 — componentes e reatividade."
+        },
+        {
+          "id": "esp-094",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "ECMAScript; DOM; Fetch API; Vue 3 — componentes e reatividade."
+        },
+        {
+          "id": "esp-095",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "ECMAScript; DOM; Fetch API; Vue 3 — componentes e reatividade."
+        }
+      ]
+    },
+    {
+      "titulo": "7. Bootstrap CSS: fundamentos e utilização.",
+      "origem": "Imagem 187849.jpg · cargo código 502 · sem numeração de página visível",
+      "materia": "Conhecimentos Específicos",
+      "questoes": [
+        {
+          "id": "esp-031",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Bootstrap 5.3 — documentação de grid, containers, breakpoints e utilitários."
+        },
+        {
+          "id": "esp-032",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Bootstrap 5.3 — documentação de grid, containers, breakpoints e utilitários."
+        },
+        {
+          "id": "esp-033",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Bootstrap 5.3 — documentação de grid, containers, breakpoints e utilitários."
+        },
+        {
+          "id": "esp-034",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Bootstrap 5.3 — documentação de grid, containers, breakpoints e utilitários."
+        },
+        {
+          "id": "esp-035",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Bootstrap 5.3 — documentação de grid, containers, breakpoints e utilitários."
+        }
+      ]
+    },
+    {
+      "titulo": "8. Design Responsivo: design responsivo, adaptativo e mobile-first.",
+      "origem": "Imagem 187849.jpg · cargo código 502 · sem numeração de página visível",
+      "materia": "Conhecimentos Específicos",
+      "questoes": [
+        {
+          "id": "esp-036",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "CSS Media Queries; responsive web design; técnicas adaptativas e mobile-first."
+        },
+        {
+          "id": "esp-037",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "CSS Media Queries; responsive web design; técnicas adaptativas e mobile-first."
+        },
+        {
+          "id": "esp-038",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "CSS Media Queries; responsive web design; técnicas adaptativas e mobile-first."
+        },
+        {
+          "id": "esp-039",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "CSS Media Queries; responsive web design; técnicas adaptativas e mobile-first."
+        },
+        {
+          "id": "esp-040",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "CSS Media Queries; responsive web design; técnicas adaptativas e mobile-first."
+        }
+      ]
+    },
+    {
+      "titulo": "9. Manipulação de Imagens: técnicas e procedimentos de manipulação de imagens digitais.",
+      "origem": "Imagem 187849.jpg · cargo código 502 · sem numeração de página visível",
+      "materia": "Conhecimentos Específicos",
+      "questoes": [
+        {
+          "id": "esp-041",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Imagens digitais — dimensões, amostragem, máscaras, composição e gerenciamento de cor."
+        },
+        {
+          "id": "esp-042",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Imagens digitais — dimensões, amostragem, máscaras, composição e gerenciamento de cor."
+        },
+        {
+          "id": "esp-043",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Imagens digitais — dimensões, amostragem, máscaras, composição e gerenciamento de cor."
+        },
+        {
+          "id": "esp-044",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Imagens digitais — dimensões, amostragem, máscaras, composição e gerenciamento de cor."
+        },
+        {
+          "id": "esp-045",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Imagens digitais — dimensões, amostragem, máscaras, composição e gerenciamento de cor."
+        }
+      ]
+    },
+    {
+      "titulo": "10. Design System do Governo Federal (gov.br): princípios e diretrizes; fundamentos visuais; identidade visual; tipografia; paleta de cores; espaçamentos; sistema de grid; padrões de interface; componentes reutilizáveis; templates; documentação para designers e desenvolvedores; responsividade; acessibilidade; usabilidade; aplicação e customização de componentes em interfaces de serviços digitais públicos.",
+      "origem": "Imagem 187849.jpg · cargo código 502 · sem numeração de página visível",
+      "materia": "Conhecimentos Específicos",
+      "questoes": [
+        {
+          "id": "esp-046",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Design System do Governo Federal — fundamentos, padrões, componentes e documentação: https://www.gov.br/ds/"
+        },
+        {
+          "id": "esp-047",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Design System do Governo Federal — fundamentos, padrões, componentes e documentação: https://www.gov.br/ds/"
+        },
+        {
+          "id": "esp-048",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Design System do Governo Federal — fundamentos, padrões, componentes e documentação: https://www.gov.br/ds/"
+        },
+        {
+          "id": "esp-049",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Design System do Governo Federal — fundamentos, padrões, componentes e documentação: https://www.gov.br/ds/"
+        },
+        {
+          "id": "esp-050",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Design System do Governo Federal — fundamentos, padrões, componentes e documentação: https://www.gov.br/ds/"
+        }
+      ]
+    },
+    {
+      "titulo": "11. Formulários e Sistemas de Gerenciamento de Conteúdo: manipulação de formulários; CMS (Content Management System).",
+      "origem": "Imagem 187849.jpg · cargo código 502 · sem numeração de página visível",
+      "materia": "Conhecimentos Específicos",
+      "questoes": [
+        {
+          "id": "esp-051",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "HTML — forms; práticas de segurança de aplicações web; CMS — modelagem editorial e permissões."
+        },
+        {
+          "id": "esp-052",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "HTML — forms; práticas de segurança de aplicações web; CMS — modelagem editorial e permissões."
+        },
+        {
+          "id": "esp-053",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "HTML — forms; práticas de segurança de aplicações web; CMS — modelagem editorial e permissões."
+        },
+        {
+          "id": "esp-054",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "HTML — forms; práticas de segurança de aplicações web; CMS — modelagem editorial e permissões."
+        },
+        {
+          "id": "esp-055",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "HTML — forms; práticas de segurança de aplicações web; CMS — modelagem editorial e permissões."
+        }
+      ]
+    },
+    {
+      "titulo": "12. WordPress: instalação e desenvolvimento de temas; instalação e desenvolvimento de plugins; instalação e atualização da plataforma.",
+      "origem": "Imagem 187849.jpg · cargo código 502 · sem numeração de página visível",
+      "materia": "Conhecimentos Específicos",
+      "questoes": [
+        {
+          "id": "esp-056",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "WordPress Developer Resources — temas, plugins, hooks, segurança e atualização: https://developer.wordpress.org/"
+        },
+        {
+          "id": "esp-057",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "WordPress Developer Resources — temas, plugins, hooks, segurança e atualização: https://developer.wordpress.org/"
+        },
+        {
+          "id": "esp-058",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "WordPress Developer Resources — temas, plugins, hooks, segurança e atualização: https://developer.wordpress.org/"
+        },
+        {
+          "id": "esp-059",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "WordPress Developer Resources — temas, plugins, hooks, segurança e atualização: https://developer.wordpress.org/"
+        },
+        {
+          "id": "esp-060",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "WordPress Developer Resources — temas, plugins, hooks, segurança e atualização: https://developer.wordpress.org/"
+        },
+        {
+          "id": "esp-101",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "WordPress Developer Resources — temas, plugins, hooks, segurança e atualização: https://developer.wordpress.org/"
+        },
+        {
+          "id": "esp-102",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "WordPress Developer Resources — temas, plugins, hooks, segurança e atualização: https://developer.wordpress.org/"
+        }
+      ]
+    },
+    {
+      "titulo": "13. Bancos de Dados: criação e manipulação de bancos de dados PostgreSQL e MySQL.",
+      "origem": "Imagem 187849.jpg · cargo código 502 · sem numeração de página visível",
+      "materia": "Conhecimentos Específicos",
+      "questoes": [
+        {
+          "id": "esp-061",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Documentação PostgreSQL e MySQL — SQL, integridade, transações e consultas parametrizadas."
+        },
+        {
+          "id": "esp-062",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Documentação PostgreSQL e MySQL — SQL, integridade, transações e consultas parametrizadas."
+        },
+        {
+          "id": "esp-063",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Documentação PostgreSQL e MySQL — SQL, integridade, transações e consultas parametrizadas."
+        },
+        {
+          "id": "esp-064",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Documentação PostgreSQL e MySQL — SQL, integridade, transações e consultas parametrizadas."
+        },
+        {
+          "id": "esp-065",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Documentação PostgreSQL e MySQL — SQL, integridade, transações e consultas parametrizadas."
+        }
+      ]
+    },
+    {
+      "titulo": "14. Newsletters: criação de mídias digitais e encaminhamento de newsletters.",
+      "origem": "Imagem 187849.jpg · cargo código 502 · sem numeração de página visível",
+      "materia": "Conhecimentos Específicos",
+      "questoes": [
+        {
+          "id": "esp-066",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Newsletters — produção de HTML para e-mail, compatibilidade, entregabilidade e mensuração."
+        },
+        {
+          "id": "esp-067",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Newsletters — produção de HTML para e-mail, compatibilidade, entregabilidade e mensuração."
+        },
+        {
+          "id": "esp-068",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Newsletters — produção de HTML para e-mail, compatibilidade, entregabilidade e mensuração."
+        },
+        {
+          "id": "esp-069",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Newsletters — produção de HTML para e-mail, compatibilidade, entregabilidade e mensuração."
+        },
+        {
+          "id": "esp-070",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Newsletters — produção de HTML para e-mail, compatibilidade, entregabilidade e mensuração."
+        }
+      ]
+    },
+    {
+      "titulo": "15. Computação Gráfica: formatos GIF, JPG e PNG.",
+      "origem": "Imagem 187849.jpg · cargo código 502 · sem numeração de página visível",
+      "materia": "Conhecimentos Específicos",
+      "questoes": [
+        {
+          "id": "esp-071",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Especificações e características dos formatos GIF, JPEG e PNG."
+        },
+        {
+          "id": "esp-072",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Especificações e características dos formatos GIF, JPEG e PNG."
+        },
+        {
+          "id": "esp-073",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Especificações e características dos formatos GIF, JPEG e PNG."
+        },
+        {
+          "id": "esp-074",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Especificações e características dos formatos GIF, JPEG e PNG."
+        },
+        {
+          "id": "esp-075",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Especificações e características dos formatos GIF, JPEG e PNG."
+        }
+      ]
+    },
+    {
+      "titulo": "16. Ferramentas de Edição e Produção Gráfica: edição e manipulação de imagens digitais; criação e edição de ilustrações e elementos gráficos; tratamento de imagens rasterizadas e vetoriais.",
+      "origem": "Imagem 187849.jpg · cargo código 502 · sem numeração de página visível",
+      "materia": "Conhecimentos Específicos",
+      "questoes": [
+        {
+          "id": "esp-076",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Produção gráfica — raster e vetor, curvas, camadas, tipografia e exportação."
+        },
+        {
+          "id": "esp-077",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Produção gráfica — raster e vetor, curvas, camadas, tipografia e exportação."
+        },
+        {
+          "id": "esp-078",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Produção gráfica — raster e vetor, curvas, camadas, tipografia e exportação."
+        },
+        {
+          "id": "esp-079",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Produção gráfica — raster e vetor, curvas, camadas, tipografia e exportação."
+        },
+        {
+          "id": "esp-080",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Produção gráfica — raster e vetor, curvas, camadas, tipografia e exportação."
+        }
+      ]
+    },
+    {
+      "titulo": "17. Otimização de Imagens: otimização de arquivos JPEG e GIF.",
+      "origem": "Imagem 187849.jpg · cargo código 502 · sem numeração de página visível",
+      "materia": "Conhecimentos Específicos",
+      "questoes": [
+        {
+          "id": "esp-081",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Otimização de imagens — JPEG e GIF: qualidade, dimensões, paleta, quadros e metadados."
+        },
+        {
+          "id": "esp-082",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Otimização de imagens — JPEG e GIF: qualidade, dimensões, paleta, quadros e metadados."
+        },
+        {
+          "id": "esp-083",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Otimização de imagens — JPEG e GIF: qualidade, dimensões, paleta, quadros e metadados."
+        },
+        {
+          "id": "esp-084",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Otimização de imagens — JPEG e GIF: qualidade, dimensões, paleta, quadros e metadados."
+        },
+        {
+          "id": "esp-085",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Otimização de imagens — JPEG e GIF: qualidade, dimensões, paleta, quadros e metadados."
+        }
+      ]
+    },
+    {
+      "titulo": "18. Áudio, Vídeo e Animação: noções de manipulação de áudio e vídeo; animação.",
+      "origem": "Imagem 187849.jpg · cargo código 502 · sem numeração de página visível",
+      "materia": "Conhecimentos Específicos",
+      "questoes": [
+        {
+          "id": "esp-086",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Mídia digital — codecs e contêineres, amostragem, sincronização, edição e animação."
+        },
+        {
+          "id": "esp-087",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Mídia digital — codecs e contêineres, amostragem, sincronização, edição e animação."
+        },
+        {
+          "id": "esp-088",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Mídia digital — codecs e contêineres, amostragem, sincronização, edição e animação."
+        },
+        {
+          "id": "esp-089",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Mídia digital — codecs e contêineres, amostragem, sincronização, edição e animação."
+        },
+        {
+          "id": "esp-090",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Mídia digital — codecs e contêineres, amostragem, sincronização, edição e animação."
+        }
+      ]
+    }
+  ]
+}

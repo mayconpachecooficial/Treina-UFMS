@@ -12,6 +12,19 @@ O mapa inclui Português, Legislação, os 18 tópicos específicos e a transcri
 
 Vercel e Supabase dependem de acesso às contas do proprietário. Não há endereço de produção confirmado nem migração remota aplicada apenas por haver arquivos de configuração neste repositório.
 
+## Banco de questões
+
+| Matéria                   | Criadas | Liberadas para estudo |
+| ------------------------- | ------: | --------------------: |
+| Língua Portuguesa         |      85 |                    85 |
+| Legislação                |      81 |                    81 |
+| Conhecimentos Específicos |     100 |                    95 |
+| **Total**                 | **266** |               **261** |
+
+O [mapa de cobertura](docs/cobertura.md) relaciona os 45 tópicos das três áreas com os IDs de questões. Cinco questões práticas de eMAG 2.0 estão sinalizadas como pendentes de conferência da cartilha histórica e ficam fora de treinos e simulados. As questões históricas liberadas sobre a versão 2.0 usam a seção histórica do documento oficial eMAG 3.1 como referência, sem atribuir regras de 3.1 à versão 2.0.
+
+Português contém um texto-base original de 411 palavras. As questões são autorais e não são apresentadas como provas anteriores ou material oficial da Fundação FAPEC.
+
 ## Executar localmente
 
 Use Node.js 22.12+ ou 24 LTS e npm.
@@ -64,7 +77,9 @@ Mantenha IDs ao corrigir erros de digitação; use outro ID quando mudar a ident
 npm run validate:bank
 ```
 
-Este comando exige pelo menos 81 questões por área, cobertura de todos os tópicos, comentários completos, referência legal e revisão de todos os itens. Pode falhar enquanto houver itens pendentes de conferência documental. Isso é diferente de uma falha de compilação. A validação automática não substitui a revisão de conteúdo, de originalidade, dificuldade, ambiguidade e vigência legal.
+Este comando exige o edital completo recebido, pelo menos 81 questões por área, cobertura de todos os tópicos, comentários completos, referência legal e revisão de todos os itens. Pode falhar enquanto houver itens pendentes de conferência documental. Isso é diferente de uma falha de compilação. A validação automática não substitui a revisão de conteúdo, de originalidade, dificuldade, ambiguidade e vigência legal.
+
+Execute `npm run coverage:bank` para atualizar `docs/cobertura.json`, com todos os títulos, IDs, fontes e a distinção entre questões criadas e liberadas. O mesmo mapa está disponível na interface.
 
 ## Configurar o Supabase
 
