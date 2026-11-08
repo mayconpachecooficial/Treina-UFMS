@@ -10,7 +10,11 @@ O mapa inclui Português, Legislação, os 18 tópicos específicos e a transcri
 
 **Divergência documental:** na imagem fornecida, o Código de Ética aparece como Resolução nº 426-Coun/UFMS. O PDF oficial no endereço indicado pelo próprio anexo (pid=593987) é a Resolução nº **496-COUN/UFMS, de 1º de abril de 2026**. A transcrição mantém o número da imagem e as questões sobre o PDF citam o número oficial. Confira o edital original/retificação para resolver a divergência.
 
-Vercel e Supabase dependem de acesso às contas do proprietário. Não há endereço de produção confirmado nem migração remota aplicada apenas por haver arquivos de configuração neste repositório.
+**Site publicado:** https://treina-ufms.vercel.app
+
+Em 8/11/2026, a Vercel confirmou a implantação do commit `e112c794306f78db4a0c87ec1b39dacaf54bc6a1`; o endereço público respondeu HTTP 200 com o título da plataforma. O projeto Supabase `nmswkgugitppfebxjllf` está configurado na versão publicada: sua API de autenticação respondeu HTTP 200, o provedor de e-mail está habilitado e a tabela `study_progress` existe, com acesso anônimo negado. Nenhum registro de usuário foi lido durante essa verificação.
+
+Os 18 testes automatizados passaram, inclusive recuperação diante de URL inválida do Supabase. Uma instalação limpa também compilou com Node.js 22. A entrada por link de e-mail e a gravação na nuvem com uma conta autenticada ainda não foram verificadas de ponta a ponta. As regras de retorno do login e o isolamento entre duas contas reais exigem essa validação autenticada; os testes existentes verificam esses fluxos com serviços simulados.
 
 ## Banco de questões
 
@@ -82,6 +86,8 @@ Este comando exige o edital completo recebido, pelo menos 81 questões por área
 Execute `npm run coverage:bank` para atualizar `docs/cobertura.json`, com todos os títulos, IDs, fontes e a distinção entre questões criadas e liberadas. O mesmo mapa está disponível na interface.
 
 ## Configurar o Supabase
+
+As instruções abaixo servem para configurar outra instalação ou revisar os ajustes da implantação. A tabela da instalação publicada já foi encontrada na verificação acima.
 
 1. Acesse seu projeto Supabase. Em **SQL Editor**, execute `supabase/migrations/202611070001_study_progress.sql`. O arquivo cria `public.study_progress`, vincula cada registro ao usuário do Supabase Auth e ativa políticas RLS para que cada usuário só acesse seu próprio progresso. Usuários anônimos não têm acesso à tabela.
 2. Em **Authentication → Providers**, habilite Email. Configure o envio de e-mails; ambientes públicos devem ter SMTP adequado ao volume esperado.
