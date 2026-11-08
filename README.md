@@ -27,7 +27,7 @@ Português contém um texto-base original de 411 palavras. As questões são aut
 
 ## Executar localmente
 
-Use Node.js 22.12+ ou 24 LTS e npm.
+Use Node.js 22 LTS e npm. O projeto fixa a versão 22 para a instalação na Vercel.
 
 ```bash
 npm ci
@@ -101,7 +101,7 @@ A sincronização usa a versão mais recente ao entrar ou clicar em **Tentar sin
 O arquivo `vercel.json` já configura Vite, `npm run build`, pasta `dist` e retorno a `index.html`.
 
 1. Execute os testes e a compilação acima. Revise os avisos de conteúdo.
-2. Entre na Vercel e importe o repositório GitHub `mayconpachecooficial/Treina-UFMS`. Use a raiz do repositório, Node.js 22 ou 24, framework Vite, build `npm run build` e saída `dist`.
+2. Entre na Vercel e importe o repositório GitHub `mayconpachecooficial/Treina-UFMS`. Use a raiz do repositório, Node.js 22, framework Vite, build `npm run build` e saída `dist`.
 3. Configure as duas variáveis públicas do Supabase e publique.
 4. Cadastre a URL **real retornada pela Vercel** na configuração do Supabase Auth e teste o link de entrada.
 5. Verifique login, persistência e isolamento entre contas na instalação real antes de afirmar que a integração está pronta em produção.
@@ -127,3 +127,7 @@ vercel.json                   Configuração de publicação
 ## Limites de verificação
 
 Os testes automatizados verificam o motor e os fluxos de interação em DOM simulado. A inspeção visual em navegador, testes com leitor de tela e a integração com um Supabase real dependem de ambiente e acesso disponíveis. O gabarito fica oculto na experiência de resposta; por ser aplicativo de estudo com banco embarcado, ele está nos arquivos públicos do cliente, não sendo um sistema antifraude para prova oficial.
+
+## Recuperação de configuração
+
+Uma configuração incompleta ou uma URL inválida do Supabase não impede a abertura do site: o estudo e o salvamento local continuam disponíveis. A seção Configurações informa a indisponibilidade da conexão. As variáveis são aplicadas durante a compilação; atualizar valores na Vercel exige nova implantação.

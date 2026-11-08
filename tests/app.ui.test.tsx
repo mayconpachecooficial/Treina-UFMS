@@ -53,7 +53,10 @@ vi.mock("../src/data", () => ({
     ],
   },
 }));
-vi.mock("../src/lib/supabase", () => ({ supabase: null }));
+vi.mock("../src/lib/supabase", () => ({
+  supabase: null,
+  supabaseConfigError: null,
+}));
 beforeEach(() => {
   localStorage.clear();
   HTMLDialogElement.prototype.showModal = function () {

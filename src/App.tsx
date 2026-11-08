@@ -42,7 +42,7 @@ import {
   stats,
 } from "./lib/study";
 import { useProgress } from "./lib/useProgress";
-import { supabase } from "./lib/supabase";
+import { supabase, supabaseConfigError } from "./lib/supabase";
 type Page =
   | "inicio"
   | "questoes"
@@ -1516,6 +1516,9 @@ function App() {
                         ? "Integração configurada"
                         : "Supabase ainda não configurado"}
                     </div>
+                    {supabaseConfigError && (
+                      <p role="status">{supabaseConfigError}</p>
+                    )}
                     {user ? (
                       <>
                         <p>
