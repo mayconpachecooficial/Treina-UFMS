@@ -73,6 +73,26 @@ const esp = [
   "17. Otimização de Imagens: otimização de arquivos JPEG e GIF.",
   "18. Áudio, Vídeo e Animação: noções de manipulação de áudio e vídeo; animação.",
 ];
+// Divisão editorial pelas frases do Anexo V; redação original preservada.
+const logic = [
+  "Lógica proposicional: proposições, valores lógicos, sentenças abertas, conectivos lógicos, tabelas-verdade, tautologia, contradição e contingência.",
+  "Negação de proposições.",
+  "Equivalências e implicações lógicas.",
+  "Argumentação lógica: validade de argumentos, inferências e conclusões.",
+  "Diagramas lógicos e operações com conjuntos.",
+  "Raciocínio sequencial: sequências numéricas, alfabéticas e figurais.",
+  "Orientação espacial e temporal.",
+  "Resolução de problemas envolvendo relações entre pessoas, objetos, lugares e situações hipotéticas.",
+  "Princípio fundamental da contagem.",
+  "Análise combinatória: arranjos, permutações e combinações.",
+  "Probabilidade.",
+  "Razões, proporções e porcentagem.",
+  "Resolução de problemas lógico-matemáticos e compreensão de processos dedutivos que, a partir de um conjunto de hipóteses, conduzem validamente a conclusões determinadas.",
+];
+const english = [
+  "Compreensão e interpretação de texto (sentido global do texto, localização de determinada ideia, palavras cognatas).",
+  "Conhecimento de vocabulário fundamental e de aspectos gramaticais em nível funcional, ou seja, como acessório à compreensão do texto.",
+];
 export const topics: Topic[] = [
   ...pt.map((title, i) => ({
     id: `pt-${String(i + 1).padStart(2, "0")}`,
@@ -95,14 +115,30 @@ export const topics: Topic[] = [
     sourcePage:
       "Edital Progep/UFMS nº 152/2026 · Anexo V · página 30 · cargo 502",
   })),
+  ...logic.map((title, i) => ({
+    id: `rl-${String(i + 1).padStart(2, "0")}`,
+    subject: "raciocinio" as const,
+    title,
+    sourcePage:
+      "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29 · Raciocínio Lógico",
+  })),
+  ...english.map((title, i) => ({
+    id: `en-${String(i + 1).padStart(2, "0")}`,
+    subject: "ingles" as const,
+    title,
+    sourcePage:
+      "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29 · Língua Inglesa",
+  })),
 ];
 export const additionalSyllabus = [
   {
+    subject: "raciocinio" as const,
     title: "RACIOCÍNIO LÓGICO",
     content:
       "Lógica proposicional: proposições, valores lógicos, sentenças abertas, conectivos lógicos, tabelas-verdade, tautologia, contradição e contingência. Negação de proposições. Equivalências e implicações lógicas. Argumentação lógica: validade de argumentos, inferências e conclusões. Diagramas lógicos e operações com conjuntos. Raciocínio sequencial: sequências numéricas, alfabéticas e figurais. Orientação espacial e temporal. Resolução de problemas envolvendo relações entre pessoas, objetos, lugares e situações hipotéticas. Princípio fundamental da contagem. Análise combinatória: arranjos, permutações e combinações. Probabilidade. Razões, proporções e porcentagem. Resolução de problemas lógico-matemáticos e compreensão de processos dedutivos que, a partir de um conjunto de hipóteses, conduzem validamente a conclusões determinadas.",
   },
   {
+    subject: "ingles" as const,
     title: "LÍNGUA INGLESA",
     content:
       "Compreensão e interpretação de texto (sentido global do texto, localização de determinada ideia, palavras cognatas). Conhecimento de vocabulário fundamental e de aspectos gramaticais em nível funcional, ou seja, como acessório à compreensão do texto.",

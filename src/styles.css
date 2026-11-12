@@ -2190,3 +2190,12 @@ dialog::backdrop {
     transition: none;
   }
 }
+
+.subject-card.violet {
+  --accent: #705587;
+  --tint: #f1ebf7;
+}
+.subject-card.teal {
+  --accent: #316c73;
+  --tint: #e5f2f2;
+}

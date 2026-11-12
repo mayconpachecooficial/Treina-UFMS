@@ -4,13 +4,13 @@ Plataforma independente de estudos para o cargo Analista de Tecnologia da Inform
 
 ## Situação da entrega
 
-O edital integral fornecido pelo usuário foi recebido e cotejado com o banco: PDF de 47 páginas, Edital Progep/UFMS nº 152, de 29 de outubro de 2026. O Anexo V está nas páginas 29–30 para as áreas deste projeto. O mapa preserva os 45 tópicos das três áreas e informa as páginas reais da fonte. Veja a [conferência do edital](docs/conferencia-edital.md).
+O edital integral fornecido pelo usuário foi recebido e cotejado com o banco: PDF de 47 páginas, Edital Progep/UFMS nº 152, de 29 de outubro de 2026. O Anexo V está nas páginas 29–30 para as áreas deste projeto. O mapa preserva os 60 tópicos das cinco áreas e informa as páginas reais da fonte. Veja a [conferência do edital](docs/conferencia-edital.md).
 
 O item 1.9 exclui da prova legislação que entre em vigor após a **data de publicação** do edital. A data do documento (29/10/2026) não é tratada automaticamente como comprovação da data de publicação. A consulta às versões normativas e às eventuais retificações deve respeitar esse critério.
 
-O mapa inclui Português, Legislação, os 18 tópicos específicos e a transcrição de Raciocínio Lógico e Língua Inglesa. As duas últimas matérias não integram o banco de questões solicitado.
+O mapa inclui Português, Legislação, os 18 tópicos específicos, os 13 blocos de Raciocínio Lógico e os dois blocos de Língua Inglesa. Os títulos das duas novas matérias preservam a redação do Anexo V, página 29.
 
-A prova oficial contém **60 questões e 100 pontos**: Português 15/15; Inglês 5/5; Legislação 10/20; Raciocínio Lógico 10/20; Específicos 20/40 (quantidade/pontos). Dura quatro horas. Os itens 10.1 e 10.2 exigem pelo menos 50% dos pontos e vedam nota zero em qualquer área. Como Inglês e Raciocínio Lógico ainda não têm questões nesta plataforma, os simulados atuais são identificados como **treinos parciais de três áreas**, sem cálculo de aprovação oficial.
+A prova oficial contém **60 questões e 100 pontos**: Português 15/15; Inglês 5/5; Legislação 10/20; Raciocínio Lógico 10/20; Específicos 20/40 (quantidade/pontos). Dura quatro horas. Os itens 10.1 e 10.2 exigem pelo menos 50% dos pontos e vedam nota zero em qualquer área. O banco contempla as cinco áreas. Os simulados misturam questões do banco e permitem escolher até 80 questões, incluindo a opção de 60. A distribuição sorteada por área pode variar: o percentual de acertos não aplica os pesos da prova nem calcula aprovação oficial.
 
 **Divergência documental:** no PDF integral, página 29, e na imagem fornecida, o Código de Ética aparece como Resolução nº 426-Coun/UFMS. O PDF oficial no endereço indicado pelo próprio anexo (pid=593987) é a Resolução nº **496-COUN/UFMS, de 1º de abril de 2026**. A transcrição mantém o número do edital e as questões sobre o documento vinculado citam o número oficial. O PDF integral confirma a divergência; não a resolve. Aguarda esclarecimento ou retificação oficial.
 
@@ -18,7 +18,7 @@ A prova oficial contém **60 questões e 100 pontos**: Português 15/15; Inglês
 
 Em 8/11/2026, a Vercel confirmou a implantação do commit `e112c794306f78db4a0c87ec1b39dacaf54bc6a1`; o endereço público respondeu HTTP 200 com o título da plataforma. O projeto Supabase `nmswkgugitppfebxjllf` está configurado na versão publicada: sua API de autenticação respondeu HTTP 200, o provedor de e-mail está habilitado e a tabela `study_progress` existe, com acesso anônimo negado. Nenhum registro de usuário foi lido durante essa verificação.
 
-Os 29 testes automatizados passaram, inclusive recuperação diante de URL inválida do Supabase. Uma instalação limpa também compilou com Node.js 22. A entrada por link de e-mail e a gravação na nuvem com uma conta autenticada ainda não foram verificadas de ponta a ponta. As regras de retorno do login e o isolamento entre duas contas reais exigem essa validação autenticada; os testes existentes verificam esses fluxos com serviços simulados.
+Os 40 testes automatizados passaram, inclusive recuperação diante de URL inválida do Supabase. A atualização de Lógica e Inglês também foi verificada em Chromium, com telas de 390 e 1440 pixels: novos cartões, textos, gesto de eliminar/restaurar, resposta e retomada local, sem erros de JavaScript ou transbordamento horizontal. Uma instalação limpa também compilou com Node.js 22. A entrada por link de e-mail e a gravação na nuvem com uma conta autenticada ainda não foram verificadas de ponta a ponta. As regras de retorno do login e o isolamento entre duas contas reais exigem essa validação autenticada; os testes existentes verificam esses fluxos com serviços simulados.
 
 ## Banco de questões
 
@@ -26,10 +26,12 @@ Os 29 testes automatizados passaram, inclusive recuperação diante de URL invá
 | ------------------------- | ------: | --------------------: |
 | Língua Portuguesa         |      85 |                    85 |
 | Legislação                |      81 |                    81 |
-| Conhecimentos Específicos |     100 |                    95 |
-| **Total**                 | **266** |               **261** |
+| Conhecimentos Específicos |     102 |                    97 |
+| Raciocínio Lógico         |      81 |                    81 |
+| Língua Inglesa            |      81 |                    81 |
+| **Total**                 | **430** |               **425** |
 
-O [mapa de cobertura](docs/cobertura.md) relaciona os 45 tópicos das três áreas com os IDs de questões. Cinco questões práticas de eMAG 2.0 estão sinalizadas como pendentes de conferência da cartilha histórica e ficam fora de treinos e simulados. As questões históricas liberadas sobre a versão 2.0 usam a seção histórica do documento oficial eMAG 3.1 como referência, sem atribuir regras de 3.1 à versão 2.0.
+O [mapa de cobertura](docs/cobertura.md) relaciona os 60 tópicos das cinco áreas com os IDs de questões. Cinco questões práticas de eMAG 2.0 estão sinalizadas como pendentes de conferência da cartilha histórica e ficam fora de treinos e simulados. As questões históricas liberadas sobre a versão 2.0 usam a seção histórica do documento oficial eMAG 3.1 como referência, sem atribuir regras de 3.1 à versão 2.0.
 
 Português contém um texto-base original de 411 palavras. As questões são autorais e não são apresentadas como provas anteriores ou material oficial da Fundação FAPEC.
 
@@ -162,3 +164,15 @@ Deslize uma alternativa para a direita ou esquerda, ou use **Eliminar**. O gesto
 Eliminar a alternativa selecionada limpa a seleção. No simulado, retira também sua confirmação até uma nova resposta; o gabarito continua oculto até finalizar. Após a correção, as cores e os ícones mostram o resultado, inclusive se a alternativa correta havia sido eliminada. **Refazer** limpa as eliminações da questão para uma nova tentativa.
 
 O comentário mostra a alternativa correta e `explanation` uma única vez. Em caso de erro, acrescenta `rationale` apenas da alternativa marcada pelo estudante. Esse comportamento vale para estudo e revisão do simulado.
+
+## Raciocínio Lógico e Língua Inglesa
+
+Incluídas a pedido do usuário em 12/11/2026, conforme o Anexo V do PDF enviado. São **162 questões autorais novas**, 81 por matéria, apenas em níveis Difícil e Muito difícil. Não são questões oficiais nem anteriores da FAPEC.
+
+- Lógica: todos os 13 blocos, incluindo proposições, negações, equivalências, argumentos, conjuntos, sequências numéricas/alfabéticas/figurais, orientação espacial/temporal, relações, contagem, análise combinatória, probabilidade, proporções/porcentagens e processos dedutivos.
+- Inglês: nove textos originais de extensão adequada; 45 questões de compreensão/interpretação e 36 de vocabulário/gramática funcional, sempre ligadas a um texto. Há perguntas de sentido global, informação localizada, inferência, referência, cognatos, valores modais e conectivos. Interface e comentários em português; textos com marcação `lang="en"` para leitores de tela.
+- As questões participam de filtros, revisão, desempenho, eliminação de alternativas, simulados e salvamento no navegador/Supabase. IDs antigos e o formato de progresso versão 1 foram preservados. Não é necessária migração do banco.
+- `src/data/authoring.ts` organiza as alternativas escritas pelo autor; não gera perguntas por modelo. O embaralhamento é estável por ID, e posições/respostas não devem ser alteradas em IDs já publicados.
+- `tests/new-subjects.test.ts` verifica cobertura exata, níveis e integridade, além de tabelas-verdade e cálculos independentes por enumeração para problemas selecionados. `tests/new-subjects.ui.test.tsx` exercita o banco real das duas matérias e a preservação do progresso. A conferência editorial humana continua recomendada para todo material didático.
+
+O comando de liberação editorial completa (`npm run validate:bank`) continua apontando **somente as cinco questões antigas de eMAG aguardando fonte histórica**; elas permanecem fora da versão estudável. As 162 novas questões passaram pela validação estrutural e estão liberadas.

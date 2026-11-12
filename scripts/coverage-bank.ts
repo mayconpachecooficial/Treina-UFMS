@@ -64,7 +64,7 @@ const markdown = [
   ]),
   "As cinco questões práticas de eMAG 2.0 aguardam a conferência da cartilha histórica. As três questões históricas liberadas indicam sua fonte oficial.",
   "",
-  "A numeração do Código de Ética diverge: o edital integral também cita 426, mas o documento oficial do link indicado é 496. Aguarda esclarecimento oficial. Raciocínio Lógico e Inglês estão transcritos na interface, sem banco de questões por não integrarem as três áreas solicitadas.",
+  "A numeração do Código de Ética diverge: o edital integral também cita 426, mas o documento oficial do link indicado é 496. Aguarda esclarecimento oficial. Raciocínio Lógico e Língua Inglesa contam agora com 81 questões cada, nos níveis difícil e muito difícil; a redação do Anexo V foi preservada nos títulos.",
   "",
 ].join("\n");
 writeFileSync(new URL("../docs/cobertura.md", import.meta.url), markdown);

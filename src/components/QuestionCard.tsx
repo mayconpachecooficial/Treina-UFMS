@@ -123,12 +123,12 @@ export default function QuestionCard({
         {topic}
       </h2>
       {q.baseText && (
-        <div className="base-text">
+        <div className="base-text" lang={q.baseText.lang}>
           <strong>{q.baseText.title}</strong>
           {q.baseText.text.split("\n").map((p, i) => (
             <p key={i}>{p}</p>
           ))}
-          <small>Texto original produzido para estudo.</small>
+          <small lang="pt-BR">Texto original produzido para estudo.</small>
         </div>
       )}
       <p className="prompt">{q.prompt}</p>
@@ -264,7 +264,10 @@ export default function QuestionCard({
                   disabled={!ready}
                   aria-label={`${muted ? "Restaurar" : "Eliminar"} alternativa ${letters[i]}`}
                   aria-pressed={muted}
-                  onClick={() => eliminate(i)}
+                  onClick={() => {
+                    suppressClick.current = null;
+                    eliminate(i);
+                  }}
                 >
                   {muted ? <Undo2 size={17} /> : <CircleMinus size={17} />}
                   <span>{muted ? "Restaurar" : "Eliminar"}</span>

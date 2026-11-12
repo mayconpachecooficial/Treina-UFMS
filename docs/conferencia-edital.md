@@ -11,7 +11,7 @@ A numeração abaixo corresponde às páginas do PDF e aos rodapés do documento
 - Página 29: os 20 tópicos editoriais de Língua Portuguesa coincidem com o conteúdo já transcrito.
 - Página 29: os sete diplomas de Legislação coincidem; foi preservada a grafia do ordinal “1°” da referência do Código de Ética no texto extraído do PDF.
 - Página 30: os 18 tópicos específicos do cargo 502 coincidem com o banco, sem adição de títulos como se fossem do edital.
-- Página 29: Raciocínio Lógico e Língua Inglesa são conhecimentos gerais para todos os cargos. Seus textos estão no mapa, mas ainda não há banco de questões dessas duas áreas.
+- Página 29: Raciocínio Lógico e Língua Inglesa são conhecimentos gerais para todos os cargos. Os 13 blocos de Lógica e os dois blocos de Inglês estão no mapa, com a redação original e 81 questões autorais em cada matéria.
 - As referências de origem dos tópicos passaram das imagens sem página para as páginas 29 e 30 do PDF integral. IDs de tópicos e questões foram preservados para manter os históricos.
 
 ## Regra temporal da legislação
@@ -35,7 +35,7 @@ Item 9.1, página 8:
 | Conhecimentos Específicos |       20 |             40 |
 | Total                     |       60 |            100 |
 
-Item 9.2: quatro horas, incluindo o cartão de respostas. Item 9.18, página 9: cinco alternativas A–E e somente uma correta. Itens 10.1 e 10.2, página 10: mínimo de 50% dos pontos e eliminação se houver nota zero em qualquer uma das cinco áreas. O treino atual abrange três áreas e não calcula aprovação nem pretende reproduzir a prova integral.
+Item 9.2: quatro horas, incluindo o cartão de respostas. Item 9.18, página 9: cinco alternativas A–E e somente uma correta. Itens 10.1 e 10.2, página 10: mínimo de 50% dos pontos e eliminação se houver nota zero em qualquer uma das cinco áreas. O treino atual abrange as cinco áreas; seu sorteio livre não fixa a distribuição oficial nem aplica sua ponderação, e não calcula aprovação.
 
 ## Divergência do Código de Ética
 
@@ -45,4 +45,4 @@ O PDF integral, na página 29, confirma “Resolução nº 426-Coun/UFMS, de 1°
 
 - O documento menciona eMAG 2.0, mas não contém a cartilha técnica histórica. As questões esp-001 a esp-005 permanecem pendentes e não são liberadas automaticamente.
 - Não foram recebidos documentos de retificação junto com este PDF.
-- O banco continua com 85 questões de Português, 81 de Legislação e 102 de Específicos, sendo cinco pendentes: 268 criadas e 263 liberadas.
+- O banco tem 85 questões de Português, 81 de Legislação, 102 de Específicos (cinco pendentes), 81 de Raciocínio Lógico e 81 de Inglês: 430 criadas e 425 liberadas.

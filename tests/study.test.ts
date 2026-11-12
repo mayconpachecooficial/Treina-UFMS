@@ -86,7 +86,7 @@ test("publicação editorial exige edital e mais de 80 questões por área", () 
     true,
   );
   assert.ok(e.includes("Edital não validado"));
-  assert.equal(e.filter((x) => x.includes("mínimo de 81")).length, 3);
+  assert.equal(e.filter((x) => x.includes("mínimo de 81")).length, 5);
   assert.deepEqual(validateBank(bank), []);
 });
 test("validador encontra tópico sem cobertura, duplicidade e referência legal ausente", () => {

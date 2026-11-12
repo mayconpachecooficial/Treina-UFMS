@@ -27,6 +27,16 @@
       "materia": "Conhecimentos Específicos",
       "criadas": 102,
       "liberadas": 97
+    },
+    {
+      "materia": "Raciocínio Lógico",
+      "criadas": 81,
+      "liberadas": 81
+    },
+    {
+      "materia": "Língua Inglesa",
+      "criadas": 81,
+      "liberadas": 81
     }
   ],
   "assuntos": [
@@ -1950,6 +1960,1083 @@
           "dificuldade": "Muito difícil",
           "situacao": "Liberada",
           "referencia": "Mídia digital — codecs e contêineres, amostragem, sincronização, edição e animação."
+        }
+      ]
+    },
+    {
+      "titulo": "Lógica proposicional: proposições, valores lógicos, sentenças abertas, conectivos lógicos, tabelas-verdade, tautologia, contradição e contingência.",
+      "origem": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29 · Raciocínio Lógico",
+      "materia": "Raciocínio Lógico",
+      "questoes": [
+        {
+          "id": "rl-001",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "rl-002",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "rl-003",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "rl-004",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "rl-005",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "rl-006",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "rl-007",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "rl-008",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "rl-009",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        }
+      ]
+    },
+    {
+      "titulo": "Negação de proposições.",
+      "origem": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29 · Raciocínio Lógico",
+      "materia": "Raciocínio Lógico",
+      "questoes": [
+        {
+          "id": "rl-010",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "rl-011",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "rl-012",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "rl-013",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "rl-014",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "rl-015",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        }
+      ]
+    },
+    {
+      "titulo": "Equivalências e implicações lógicas.",
+      "origem": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29 · Raciocínio Lógico",
+      "materia": "Raciocínio Lógico",
+      "questoes": [
+        {
+          "id": "rl-016",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "rl-017",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "rl-018",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "rl-019",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "rl-020",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "rl-021",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        }
+      ]
+    },
+    {
+      "titulo": "Argumentação lógica: validade de argumentos, inferências e conclusões.",
+      "origem": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29 · Raciocínio Lógico",
+      "materia": "Raciocínio Lógico",
+      "questoes": [
+        {
+          "id": "rl-022",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "rl-023",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "rl-024",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "rl-025",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "rl-026",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "rl-027",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        }
+      ]
+    },
+    {
+      "titulo": "Diagramas lógicos e operações com conjuntos.",
+      "origem": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29 · Raciocínio Lógico",
+      "materia": "Raciocínio Lógico",
+      "questoes": [
+        {
+          "id": "rl-028",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "rl-029",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "rl-030",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "rl-031",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "rl-032",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "rl-033",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        }
+      ]
+    },
+    {
+      "titulo": "Raciocínio sequencial: sequências numéricas, alfabéticas e figurais.",
+      "origem": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29 · Raciocínio Lógico",
+      "materia": "Raciocínio Lógico",
+      "questoes": [
+        {
+          "id": "rl-034",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "rl-035",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "rl-036",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "rl-037",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "rl-038",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "rl-039",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        }
+      ]
+    },
+    {
+      "titulo": "Orientação espacial e temporal.",
+      "origem": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29 · Raciocínio Lógico",
+      "materia": "Raciocínio Lógico",
+      "questoes": [
+        {
+          "id": "rl-040",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "rl-041",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "rl-042",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "rl-043",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "rl-044",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "rl-045",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        }
+      ]
+    },
+    {
+      "titulo": "Resolução de problemas envolvendo relações entre pessoas, objetos, lugares e situações hipotéticas.",
+      "origem": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29 · Raciocínio Lógico",
+      "materia": "Raciocínio Lógico",
+      "questoes": [
+        {
+          "id": "rl-046",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "rl-047",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "rl-048",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "rl-049",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "rl-050",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "rl-051",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        }
+      ]
+    },
+    {
+      "titulo": "Princípio fundamental da contagem.",
+      "origem": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29 · Raciocínio Lógico",
+      "materia": "Raciocínio Lógico",
+      "questoes": [
+        {
+          "id": "rl-052",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "rl-053",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "rl-054",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "rl-055",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "rl-056",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "rl-057",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        }
+      ]
+    },
+    {
+      "titulo": "Análise combinatória: arranjos, permutações e combinações.",
+      "origem": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29 · Raciocínio Lógico",
+      "materia": "Raciocínio Lógico",
+      "questoes": [
+        {
+          "id": "rl-058",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "rl-059",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "rl-060",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "rl-061",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "rl-062",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "rl-063",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        }
+      ]
+    },
+    {
+      "titulo": "Probabilidade.",
+      "origem": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29 · Raciocínio Lógico",
+      "materia": "Raciocínio Lógico",
+      "questoes": [
+        {
+          "id": "rl-064",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "rl-065",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "rl-066",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "rl-067",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "rl-068",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "rl-069",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        }
+      ]
+    },
+    {
+      "titulo": "Razões, proporções e porcentagem.",
+      "origem": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29 · Raciocínio Lógico",
+      "materia": "Raciocínio Lógico",
+      "questoes": [
+        {
+          "id": "rl-070",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "rl-071",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "rl-072",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "rl-073",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "rl-074",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "rl-075",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        }
+      ]
+    },
+    {
+      "titulo": "Resolução de problemas lógico-matemáticos e compreensão de processos dedutivos que, a partir de um conjunto de hipóteses, conduzem validamente a conclusões determinadas.",
+      "origem": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29 · Raciocínio Lógico",
+      "materia": "Raciocínio Lógico",
+      "questoes": [
+        {
+          "id": "rl-076",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "rl-077",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "rl-078",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "rl-079",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "rl-080",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "rl-081",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        }
+      ]
+    },
+    {
+      "titulo": "Compreensão e interpretação de texto (sentido global do texto, localização de determinada ideia, palavras cognatas).",
+      "origem": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29 · Língua Inglesa",
+      "materia": "Língua Inglesa",
+      "questoes": [
+        {
+          "id": "en-001",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "en-002",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "en-003",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "en-004",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "en-005",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "en-010",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "en-011",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "en-012",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "en-013",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "en-014",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "en-019",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "en-020",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "en-021",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "en-022",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "en-023",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "en-028",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "en-029",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "en-030",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "en-031",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "en-032",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "en-037",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "en-038",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "en-039",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "en-040",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "en-041",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "en-046",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "en-047",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "en-048",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "en-049",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "en-050",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "en-055",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "en-056",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "en-057",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "en-058",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "en-059",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "en-064",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "en-065",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "en-066",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "en-067",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "en-068",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "en-073",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "en-074",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "en-075",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "en-076",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "en-077",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        }
+      ]
+    },
+    {
+      "titulo": "Conhecimento de vocabulário fundamental e de aspectos gramaticais em nível funcional, ou seja, como acessório à compreensão do texto.",
+      "origem": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29 · Língua Inglesa",
+      "materia": "Língua Inglesa",
+      "questoes": [
+        {
+          "id": "en-006",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "en-007",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "en-008",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "en-009",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "en-015",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "en-016",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "en-017",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "en-018",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "en-024",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "en-025",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "en-026",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "en-027",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "en-033",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "en-034",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "en-035",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "en-036",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "en-042",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "en-043",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "en-044",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "en-045",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "en-051",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "en-052",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "en-053",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "en-054",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "en-060",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "en-061",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "en-062",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "en-063",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "en-069",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "en-070",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "en-071",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "en-072",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "en-078",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "en-079",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "en-080",
+          "dificuldade": "Difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
+        },
+        {
+          "id": "en-081",
+          "dificuldade": "Muito difícil",
+          "situacao": "Liberada",
+          "referencia": "Edital Progep/UFMS nº 152/2026 · Anexo V · página 29. Questão e texto autorais."
         }
       ]
     }

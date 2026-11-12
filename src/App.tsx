@@ -3,6 +3,8 @@ import {
   ArrowDownToLine,
   ArrowRight,
   BarChart3,
+  BrainCircuit,
+  Languages,
   BookOpen,
   Bookmark,
   Check,
@@ -53,7 +55,13 @@ type Page =
   | "desempenho"
   | "edital"
   | "config";
-const icons = { portugues: BookOpen, legislacao: Scale, especificos: Code2 };
+const icons = {
+  portugues: BookOpen,
+  legislacao: Scale,
+  especificos: Code2,
+  raciocinio: BrainCircuit,
+  ingles: Languages,
+};
 const titles: Record<Page, string> = {
   inicio: "Meu painel",
   questoes: "Banco de questões",
@@ -1059,12 +1067,13 @@ function App() {
                 <div className="notice-panel" role="note">
                   <FileCheck2 size={24} />
                   <div>
-                    <h2>Treino parcial das três matérias</h2>
+                    <h2>Simulado das cinco matérias</h2>
                     <p>
-                      A prova do edital tem 60 questões em cinco áreas. Este
-                      treino reúne Português, Legislação e Específicos; Inglês e
-                      Raciocínio Lógico ainda não têm questões. O percentual
-                      deste treino não corresponde à nota oficial de 100 pontos.
+                      Português, Inglês, Legislação, Raciocínio Lógico e
+                      Específicos estão disponíveis. Este treino mistura o
+                      banco; a quantidade por área pode variar. O percentual de
+                      acertos não equivale à nota ponderada de 100 pontos da
+                      prova oficial.
                     </p>
                     <button
                       className="text-button"
@@ -1101,7 +1110,7 @@ function App() {
                               setSimulationSize(Number(e.target.value))
                             }
                           >
-                            {[10, 20, 30, 50, 80].map((n) => (
+                            {[10, 20, 30, 50, 60, 80].map((n) => (
                               <option key={n} value={n}>
                                 {n} questões
                               </option>
@@ -1172,7 +1181,7 @@ function App() {
                             </summary>
                             <p>{q.prompt}</p>
                             {q.baseText && (
-                              <div className="base-text">
+                              <div className="base-text" lang={q.baseText.lang}>
                                 <strong>{q.baseText.title}</strong>
                                 <p>{q.baseText.text}</p>
                               </div>
@@ -1457,7 +1466,7 @@ function App() {
                             </td>
                             <td>{exam.totalQuestions}</td>
                             <td>{exam.totalPoints}</td>
-                            <td>Cobertura atual: três das cinco áreas</td>
+                            <td>Cobertura atual: cinco das cinco áreas</td>
                           </tr>
                         </tbody>
                       </table>
@@ -1465,8 +1474,8 @@ function App() {
                     <p className="muted">
                       Duração: {exam.durationHours} horas, incluindo o cartão de
                       respostas. Mínimo de {exam.minimumPercentage}% dos pontos;
-                      nota zero em qualquer área elimina. O treino parcial não
-                      calcula aprovação no concurso.
+                      nota zero em qualquer área elimina. Este simulado de
+                      treino não calcula aprovação no concurso.
                     </p>
                   </section>
                   <div className="section-subtitle" />
@@ -1590,14 +1599,21 @@ function App() {
                     ))}
                   </section>
                   <section className="panel coverage additional-syllabus">
-                    <h2>Outras matérias presentes no Anexo V</h2>
+                    <h2>Transcrição integral de Lógica e Inglês</h2>
                     <p className="muted">
-                      Transcritas para manter o mapa completo. Sem questões: o
-                      banco solicitado contempla as três áreas acima.
+                      Redação do Anexo V, página 29. Os blocos e as questões
+                      correspondentes estão disponíveis no mapa acima.
                     </p>
                     {additionalSyllabus.map((s) => (
                       <details className="coverage-topic" key={s.title}>
-                        <summary>{s.title} · 0 questões</summary>
+                        <summary>
+                          {s.title} ·{" "}
+                          {
+                            available.filter((q) => q.subject === s.subject)
+                              .length
+                          }{" "}
+                          questões
+                        </summary>
                         <p>{s.content}</p>
                       </details>
                     ))}

@@ -1,6 +1,8 @@
 import { portugues } from "./portugues";
 import { legislacao } from "./legislacao";
 import { especificos } from "./especificos";
+import { raciocinio } from "./raciocinio";
+import { ingles } from "./ingles";
 import { topics } from "./topics";
 import type { Bank } from "../types";
 export const bank: Bank = {
@@ -19,5 +21,11 @@ export const bank: Bank = {
     ],
   },
   topics,
-  questions: [...portugues, ...legislacao, ...especificos],
+  questions: [
+    ...portugues,
+    ...legislacao,
+    ...especificos,
+    ...raciocinio,
+    ...ingles,
+  ],
 };

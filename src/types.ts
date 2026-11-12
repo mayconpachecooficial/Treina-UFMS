@@ -20,6 +20,20 @@ export const subjects = [
     description: "Seu conhecimento em web, na prática.",
     color: "green",
   },
+  {
+    id: "raciocinio",
+    name: "Raciocínio Lógico",
+    short: "Raciocínio Lógico",
+    description: "Conecte hipóteses. Sustente conclusões.",
+    color: "violet",
+  },
+  {
+    id: "ingles",
+    name: "Língua Inglesa",
+    short: "Inglês",
+    description: "Leia o contexto. Entenda as entrelinhas.",
+    color: "teal",
+  },
 ] as const;
 export type Subject = (typeof subjects)[number]["id"];
 export type Difficulty = "Difícil" | "Muito difícil";
@@ -29,7 +43,7 @@ export type Question = {
   topicId: string;
   difficulty: Difficulty;
   prompt: string;
-  baseText?: { title: string; text: string };
+  baseText?: { title: string; text: string; lang?: "pt-BR" | "en" };
   code?: string;
   options: [string, string, string, string, string];
   correct: number;

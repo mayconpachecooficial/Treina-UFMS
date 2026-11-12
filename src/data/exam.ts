@@ -7,9 +7,9 @@ export const exam = {
   zeroInAnyAreaEliminates: true,
   areas: [
     { name: "Língua Portuguesa", questions: 15, points: 15, available: true },
-    { name: "Língua Inglesa", questions: 5, points: 5, available: false },
+    { name: "Língua Inglesa", questions: 5, points: 5, available: true },
     { name: "Legislação", questions: 10, points: 20, available: true },
-    { name: "Raciocínio Lógico", questions: 10, points: 20, available: false },
+    { name: "Raciocínio Lógico", questions: 10, points: 20, available: true },
     {
       name: "Conhecimentos Específicos",
       questions: 20,

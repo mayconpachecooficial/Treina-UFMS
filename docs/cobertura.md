@@ -7,6 +7,8 @@ Fonte: Anexo V — Edital Progep/UFMS nº 152, de 29 de outubro de 2026. Conteú
 | Língua Portuguesa | 85 | 85 |
 | Legislação | 81 | 81 |
 | Conhecimentos Específicos | 102 | 97 |
+| Raciocínio Lógico | 81 | 81 |
+| Língua Inglesa | 81 | 81 |
 
 ## Língua Portuguesa
 
@@ -284,6 +286,100 @@ Origem: Edital Progep/UFMS nº 152/2026 · Anexo V · página 30 · cargo 502.
 
 esp-086, esp-087, esp-088, esp-089, esp-090.
 
+## Raciocínio Lógico
+
+### Lógica proposicional: proposições, valores lógicos, sentenças abertas, conectivos lógicos, tabelas-verdade, tautologia, contradição e contingência.
+
+Origem: Edital Progep/UFMS nº 152/2026 · Anexo V · página 29 · Raciocínio Lógico.
+
+rl-001, rl-002, rl-003, rl-004, rl-005, rl-006, rl-007, rl-008, rl-009.
+
+### Negação de proposições.
+
+Origem: Edital Progep/UFMS nº 152/2026 · Anexo V · página 29 · Raciocínio Lógico.
+
+rl-010, rl-011, rl-012, rl-013, rl-014, rl-015.
+
+### Equivalências e implicações lógicas.
+
+Origem: Edital Progep/UFMS nº 152/2026 · Anexo V · página 29 · Raciocínio Lógico.
+
+rl-016, rl-017, rl-018, rl-019, rl-020, rl-021.
+
+### Argumentação lógica: validade de argumentos, inferências e conclusões.
+
+Origem: Edital Progep/UFMS nº 152/2026 · Anexo V · página 29 · Raciocínio Lógico.
+
+rl-022, rl-023, rl-024, rl-025, rl-026, rl-027.
+
+### Diagramas lógicos e operações com conjuntos.
+
+Origem: Edital Progep/UFMS nº 152/2026 · Anexo V · página 29 · Raciocínio Lógico.
+
+rl-028, rl-029, rl-030, rl-031, rl-032, rl-033.
+
+### Raciocínio sequencial: sequências numéricas, alfabéticas e figurais.
+
+Origem: Edital Progep/UFMS nº 152/2026 · Anexo V · página 29 · Raciocínio Lógico.
+
+rl-034, rl-035, rl-036, rl-037, rl-038, rl-039.
+
+### Orientação espacial e temporal.
+
+Origem: Edital Progep/UFMS nº 152/2026 · Anexo V · página 29 · Raciocínio Lógico.
+
+rl-040, rl-041, rl-042, rl-043, rl-044, rl-045.
+
+### Resolução de problemas envolvendo relações entre pessoas, objetos, lugares e situações hipotéticas.
+
+Origem: Edital Progep/UFMS nº 152/2026 · Anexo V · página 29 · Raciocínio Lógico.
+
+rl-046, rl-047, rl-048, rl-049, rl-050, rl-051.
+
+### Princípio fundamental da contagem.
+
+Origem: Edital Progep/UFMS nº 152/2026 · Anexo V · página 29 · Raciocínio Lógico.
+
+rl-052, rl-053, rl-054, rl-055, rl-056, rl-057.
+
+### Análise combinatória: arranjos, permutações e combinações.
+
+Origem: Edital Progep/UFMS nº 152/2026 · Anexo V · página 29 · Raciocínio Lógico.
+
+rl-058, rl-059, rl-060, rl-061, rl-062, rl-063.
+
+### Probabilidade.
+
+Origem: Edital Progep/UFMS nº 152/2026 · Anexo V · página 29 · Raciocínio Lógico.
+
+rl-064, rl-065, rl-066, rl-067, rl-068, rl-069.
+
+### Razões, proporções e porcentagem.
+
+Origem: Edital Progep/UFMS nº 152/2026 · Anexo V · página 29 · Raciocínio Lógico.
+
+rl-070, rl-071, rl-072, rl-073, rl-074, rl-075.
+
+### Resolução de problemas lógico-matemáticos e compreensão de processos dedutivos que, a partir de um conjunto de hipóteses, conduzem validamente a conclusões determinadas.
+
+Origem: Edital Progep/UFMS nº 152/2026 · Anexo V · página 29 · Raciocínio Lógico.
+
+rl-076, rl-077, rl-078, rl-079, rl-080, rl-081.
+
+## Língua Inglesa
+
+### Compreensão e interpretação de texto (sentido global do texto, localização de determinada ideia, palavras cognatas).
+
+Origem: Edital Progep/UFMS nº 152/2026 · Anexo V · página 29 · Língua Inglesa.
+
+en-001, en-002, en-003, en-004, en-005, en-010, en-011, en-012, en-013, en-014, en-019, en-020, en-021, en-022, en-023, en-028, en-029, en-030, en-031, en-032, en-037, en-038, en-039, en-040, en-041, en-046, en-047, en-048, en-049, en-050, en-055, en-056, en-057, en-058, en-059, en-064, en-065, en-066, en-067, en-068, en-073, en-074, en-075, en-076, en-077.
+
+### Conhecimento de vocabulário fundamental e de aspectos gramaticais em nível funcional, ou seja, como acessório à compreensão do texto.
+
+Origem: Edital Progep/UFMS nº 152/2026 · Anexo V · página 29 · Língua Inglesa.
+
+en-006, en-007, en-008, en-009, en-015, en-016, en-017, en-018, en-024, en-025, en-026, en-027, en-033, en-034, en-035, en-036, en-042, en-043, en-044, en-045, en-051, en-052, en-053, en-054, en-060, en-061, en-062, en-063, en-069, en-070, en-071, en-072, en-078, en-079, en-080, en-081.
+
 As cinco questões práticas de eMAG 2.0 aguardam a conferência da cartilha histórica. As três questões históricas liberadas indicam sua fonte oficial.
 
-A numeração do Código de Ética diverge: o edital integral também cita 426, mas o documento oficial do link indicado é 496. Aguarda esclarecimento oficial. Raciocínio Lógico e Inglês estão transcritos na interface, sem banco de questões por não integrarem as três áreas solicitadas.
+A numeração do Código de Ética diverge: o edital integral também cita 426, mas o documento oficial do link indicado é 496. Aguarda esclarecimento oficial. Raciocínio Lógico e Língua Inglesa contam agora com 81 questões cada, nos níveis difícil e muito difícil; a redação do Anexo V foi preservada nos títulos.

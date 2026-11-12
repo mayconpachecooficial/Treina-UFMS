@@ -196,22 +196,25 @@ test("reinício pede confirmação e limpa respostas", async () => {
   expect(JSON.parse(localStorage.getItem(STORAGE_KEY)!).answers).toEqual({});
 });
 
-test("identifica o simulado de três áreas como treino parcial da prova", async () => {
+test("explica que o treino das cinco matérias não aplica a ponderação oficial", async () => {
   render(<App />);
   await waitFor(() =>
     expect(screen.getByText("Salvo neste navegador")).toBeTruthy(),
   );
   fireEvent.click(screen.getByRole("button", { name: "Simulados" }));
-  expect(screen.getByText("Treino parcial das três matérias")).toBeTruthy();
+  expect(screen.getByText("Simulado das cinco matérias")).toBeTruthy();
   fireEvent.click(
     screen.getByRole("button", { name: "Ver composição da prova" }),
   );
   expect(
     screen.getByRole("table", { name: "Composição oficial da prova objetiva" }),
   ).toBeTruthy();
-  expect(screen.getByText("Língua Inglesa")).toBeTruthy();
-  expect(screen.getByText("Raciocínio Lógico")).toBeTruthy();
-  expect(screen.getAllByText("Sem questões cadastradas")).toHaveLength(2);
+  expect(screen.getAllByText("Língua Inglesa").length).toBeGreaterThan(0);
+  expect(screen.getAllByText("Raciocínio Lógico").length).toBeGreaterThan(0);
+  expect(screen.queryByText("Sem questões cadastradas")).toBeNull();
+  expect(
+    screen.getByText("Cobertura atual: cinco das cinco áreas"),
+  ).toBeTruthy();
 });
 
 test("selecionar permite trocar a alternativa sem corrigir nem registrar tentativa", async () => {
@@ -393,6 +396,14 @@ test("deslizar nos dois sentidos elimina e restaura; rolagem e cancelamento não
     screen.getByRole("button", { name: "Eliminar alternativa A" }),
   ).toBeTruthy();
   expect(savedProgress().history).toHaveLength(0);
+  fireEvent.click(
+    screen.getByRole("button", { name: "Eliminar alternativa A" }),
+  );
+  fireEvent.click(
+    screen.getByRole("button", { name: "Restaurar alternativa A" }),
+  );
+  fireEvent.click(option, { detail: 1 });
+  expect(option.getAttribute("aria-pressed")).toBe("true");
 });
 test("eliminar resposta confirmada no simulado retira escolha sem revelar gabarito", async () => {
   render(<App />);

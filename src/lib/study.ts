@@ -1,4 +1,4 @@
-import type { Bank, Progress, Question } from "../types";
+import { subjects, type Bank, type Progress, type Question } from "../types";
 export const STORAGE_KEY = "treina-ufms:progress:v1";
 export const emptyProgress = (): Progress => ({
   version: 1,
@@ -48,7 +48,7 @@ export function isProgress(v: unknown): v is Progress {
         h &&
         typeof h.date === "string" &&
         typeof h.correct === "boolean" &&
-        ["portugues", "legislacao", "especificos"].includes(h.subject) &&
+        subjects.some((s) => s.id === h.subject) &&
         typeof h.topicId === "string",
     ) &&
     (p.simulation === null ||
@@ -150,7 +150,7 @@ export function validateBank(bank: Bank, release = false): string[] {
       );
     if (bank.source.status !== "verified" || !bank.source.verifiedAt)
       errors.push("Edital não validado");
-    for (const subject of ["portugues", "legislacao", "especificos"])
+    for (const { id: subject } of subjects)
       if (bank.questions.filter((q) => q.subject === subject).length < 81)
         errors.push(`${subject}: mínimo de 81 questões`);
     for (const t of bank.topics)
