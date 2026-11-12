@@ -5,6 +5,7 @@ export const emptyProgress = (): Progress => ({
   updatedAt: new Date().toISOString(),
   answers: {},
   bookmarks: [],
+  eliminatedOptions: {},
   cursor: null,
   history: [],
   simulation: null,
@@ -28,6 +29,16 @@ export function isProgress(v: unknown): v is Progress {
         typeof a.correct === "boolean" &&
         typeof a.at === "string",
     ) &&
+    (p.eliminatedOptions === undefined ||
+      (!!p.eliminatedOptions &&
+        typeof p.eliminatedOptions === "object" &&
+        !Array.isArray(p.eliminatedOptions) &&
+        Object.values(p.eliminatedOptions).every(
+          (indices) =>
+            Array.isArray(indices) &&
+            new Set(indices).size === indices.length &&
+            indices.every((i) => Number.isInteger(i) && i >= 0 && i < 5),
+        ))) &&
     Array.isArray(p.bookmarks) &&
     p.bookmarks.every((x) => typeof x === "string") &&
     (p.cursor === null || typeof p.cursor === "string") &&

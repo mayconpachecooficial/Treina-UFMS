@@ -44,7 +44,7 @@ vi.mock("../src/data", () => ({
         rationale: [
           "Justificativa um",
           "Justificativa dois",
-          "Justificativa três",
+          "Comentário de teste.",
           "Justificativa quatro",
           "Justificativa cinco",
         ],
@@ -94,6 +94,7 @@ beforeEach(() => {
 afterEach(() => {
   cleanup();
   vi.restoreAllMocks();
+  vi.unstubAllGlobals();
 });
 async function openStudy() {
   render(<App />);
@@ -110,12 +111,13 @@ test("gabarito oculto; erro explicado; refazer registra acerto", async () => {
   fireEvent.click(screen.getByRole("button", { name: "Responder" }));
   expect(screen.getByText("Você errou")).toBeTruthy();
   expect(screen.getByText("Justificativa um")).toBeTruthy();
-  expect(screen.getByText("Justificativa três")).toBeTruthy();
+  expect(screen.getAllByText("Comentário de teste.")).toHaveLength(1);
   fireEvent.click(screen.getByRole("button", { name: "Refazer" }));
   expect(screen.queryByText("Você errou")).toBeNull();
   fireEvent.click(screen.getByRole("button", { name: "C Opção três" }));
   fireEvent.click(screen.getByRole("button", { name: "Responder" }));
   expect(screen.getByText("Você acertou!")).toBeTruthy();
+  expect(screen.getAllByText("Comentário de teste.")).toHaveLength(1);
   const saved = JSON.parse(localStorage.getItem(STORAGE_KEY)!);
   expect(saved.answers["teste-1"].correct).toBe(true);
   expect(saved.history).toHaveLength(2);
@@ -160,6 +162,7 @@ test("simulado retoma resposta após reabrir e corrige apenas ao finalizar", asy
     screen.getAllByRole("button", { name: "Finalizar simulado" })[0],
   );
   expect(screen.getByText("Simulado concluído!")).toBeTruthy();
+  expect(screen.getAllByText("Comentário de teste.")).toHaveLength(1);
   expect(screen.getByText("100")).toBeTruthy();
   expect(
     JSON.parse(localStorage.getItem(STORAGE_KEY)!).answers["teste-1"].correct,
@@ -283,4 +286,134 @@ test("é possível voltar às questões confirmadas dentro da sequência de não
   expect(JSON.parse(localStorage.getItem(STORAGE_KEY)!).history).toHaveLength(
     1,
   );
+});
+
+function savedProgress() {
+  return JSON.parse(localStorage.getItem(STORAGE_KEY)!);
+}
+test("eliminar mantém alternativa visível e salva ao navegar e reabrir, sem tentativa", async () => {
+  await openStudy();
+  fireEvent.click(
+    screen.getByRole("button", { name: "Eliminar alternativa A" }),
+  );
+  expect(screen.getByText("Opção um").closest("button")!.disabled).toBe(true);
+  expect(screen.getByText("Eliminada")).toBeTruthy();
+  expect(savedProgress().eliminatedOptions["teste-1"]).toEqual([0]);
+  expect(savedProgress().history).toHaveLength(0);
+  fireEvent.click(screen.getByRole("button", { name: "Próxima" }));
+  fireEvent.click(screen.getByRole("button", { name: "Anterior" }));
+  expect(
+    screen.getByRole("button", { name: "Restaurar alternativa A" }),
+  ).toBeTruthy();
+  cleanup();
+  await openStudy();
+  expect(
+    screen.getByRole("button", { name: "Restaurar alternativa A" }),
+  ).toBeTruthy();
+  fireEvent.click(
+    screen.getByRole("button", { name: "Restaurar alternativa A" }),
+  );
+  expect(
+    screen.getByRole("button", { name: "A Opção um" }).hasAttribute("disabled"),
+  ).toBe(false);
+  expect(savedProgress().eliminatedOptions["teste-1"]).toBeUndefined();
+  expect(savedProgress().history).toHaveLength(0);
+});
+test("eliminar seleção exige nova escolha e correção revela gabarito mesmo eliminado", async () => {
+  await openStudy();
+  fireEvent.click(screen.getByRole("button", { name: "C Opção três" }));
+  fireEvent.click(
+    screen.getByRole("button", { name: "Eliminar alternativa C" }),
+  );
+  expect(
+    screen.getByRole("button", { name: "Responder" }).hasAttribute("disabled"),
+  ).toBe(true);
+  expect(screen.queryByText("Comentário de teste.")).toBeNull();
+  fireEvent.click(screen.getByRole("button", { name: "A Opção um" }));
+  fireEvent.click(screen.getByRole("button", { name: "Responder" }));
+  expect(screen.getByText("Você errou")).toBeTruthy();
+  expect(
+    screen
+      .getByText("Opção três")
+      .closest("button")!
+      .classList.contains("correct"),
+  ).toBe(true);
+  expect(screen.queryByText("Eliminada")).toBeNull();
+  expect(screen.getAllByText("Comentário de teste.")).toHaveLength(1);
+  expect(screen.getByText("Justificativa um")).toBeTruthy();
+  fireEvent.click(screen.getByRole("button", { name: "Refazer" }));
+  expect(
+    screen.queryByRole("button", { name: "Restaurar alternativa C" }),
+  ).toBeNull();
+});
+test("deslizar nos dois sentidos elimina e restaura; rolagem e cancelamento não eliminam", async () => {
+  class TouchPointerEvent extends MouseEvent {
+    pointerId: number;
+    pointerType: string;
+    isPrimary: boolean;
+    constructor(type: string, init: PointerEventInit = {}) {
+      super(type, init);
+      this.pointerId = init.pointerId ?? 1;
+      this.pointerType = init.pointerType ?? "touch";
+      this.isPrimary = init.isPrimary ?? true;
+    }
+  }
+  vi.stubGlobal("PointerEvent", TouchPointerEvent);
+  await openStudy();
+  const row = screen.getByText("Opção um").closest(".option-row")!;
+  const start = {
+    pointerId: 1,
+    pointerType: "touch",
+    isPrimary: true,
+    clientX: 100,
+    clientY: 100,
+  };
+  fireEvent.pointerDown(row, start);
+  fireEvent.pointerMove(row, { ...start, clientX: 180 });
+  fireEvent.pointerUp(row, { ...start, clientX: 180 });
+  expect(
+    screen.getByRole("button", { name: "Restaurar alternativa A" }),
+  ).toBeTruthy();
+  fireEvent.pointerDown(row, start);
+  fireEvent.pointerUp(row, { ...start, clientX: 20 });
+  const option = screen.getByRole("button", { name: "A Opção um" });
+  expect(option.hasAttribute("disabled")).toBe(false);
+  fireEvent.click(option, { detail: 1 }); // click sintético que segue o gesto
+  expect(option.getAttribute("aria-pressed")).toBe("false");
+  fireEvent.pointerDown(row, start);
+  fireEvent.pointerMove(row, { ...start, clientY: 200 });
+  fireEvent.pointerUp(row, { ...start, clientY: 200, clientX: 180 });
+  expect(
+    screen.getByRole("button", { name: "Eliminar alternativa A" }),
+  ).toBeTruthy();
+  fireEvent.pointerDown(row, start);
+  fireEvent.pointerCancel(row, start);
+  fireEvent.pointerUp(row, { ...start, clientX: 180 });
+  expect(
+    screen.getByRole("button", { name: "Eliminar alternativa A" }),
+  ).toBeTruthy();
+  expect(savedProgress().history).toHaveLength(0);
+});
+test("eliminar resposta confirmada no simulado retira escolha sem revelar gabarito", async () => {
+  render(<App />);
+  await waitFor(() =>
+    expect(screen.getByText("Salvo neste navegador")).toBeTruthy(),
+  );
+  fireEvent.click(screen.getByRole("button", { name: "Simulados" }));
+  fireEvent.click(screen.getByRole("button", { name: "Iniciar simulado" }));
+  fireEvent.click(screen.getByRole("button", { name: "C Opção três" }));
+  fireEvent.click(screen.getByRole("button", { name: "Responder" }));
+  expect(savedProgress().simulation.choices["teste-1"]).toBe(2);
+  fireEvent.click(
+    screen.getByRole("button", { name: "Eliminar alternativa C" }),
+  );
+  expect(savedProgress().simulation.choices["teste-1"]).toBeUndefined();
+  expect(
+    screen.getByRole("button", { name: "Responder" }).hasAttribute("disabled"),
+  ).toBe(true);
+  expect(screen.queryByText("Comentário de teste.")).toBeNull();
+  fireEvent.click(screen.getByRole("button", { name: "A Opção um" }));
+  fireEvent.click(screen.getByRole("button", { name: "Responder" }));
+  expect(savedProgress().simulation.choices["teste-1"]).toBe(0);
+  expect(savedProgress().history).toHaveLength(0);
 });

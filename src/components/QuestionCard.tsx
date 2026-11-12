@@ -1,10 +1,12 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   ArrowRight,
   Bookmark,
   Check,
   CheckCircle2,
   ChevronLeft,
+  CircleMinus,
+  Undo2,
   RotateCcw,
   ShieldCheck,
   XCircle,
@@ -30,6 +32,7 @@ type Props = {
   topic: string;
   onSelect: (choice: number) => void;
   onSubmit: () => void;
+  onEliminate: (index: number) => void;
   onRedo: () => void;
   onBookmark: () => void;
   onNavigate: (index: number) => void;
@@ -45,6 +48,7 @@ export default function QuestionCard({
   topic,
   onSelect,
   onSubmit,
+  onEliminate,
   onRedo,
   onBookmark,
   onNavigate,
@@ -61,9 +65,34 @@ export default function QuestionCard({
   const choice = hasDraft ? draftChoices[draftKey] : confirmedChoice;
   const confirmed = !hasDraft && confirmedChoice !== undefined;
   const corrected = confirmed && !simulation;
+  const eliminated = progress.eliminatedOptions?.[draftKey] ?? [];
+  const gesture = useRef<{
+    x: number;
+    y: number;
+    pointer: number;
+    index: number;
+    key: string;
+  } | null>(null);
+  const suppressClick = useRef<{
+    index: number;
+    key: string;
+    until: number;
+  } | null>(null);
+  const [announcement, setAnnouncement] = useState("");
+  const [drag, setDrag] = useState<{ index: number; x: number } | null>(null);
+  const eliminate = (i: number) => {
+    if (!ready || corrected) return;
+    onEliminate(i);
+    setAnnouncement(
+      `Alternativa ${letters[i]} ${eliminated.includes(i) ? "restaurada" : "eliminada"}.`,
+    );
+  };
   const heading = useRef<HTMLHeadingElement>(null);
   useEffect(() => {
     heading.current?.focus();
+    gesture.current = null;
+    setDrag(null);
+    setAnnouncement("");
   }, [q.id]);
   return (
     <article className="question-card panel">
@@ -108,7 +137,17 @@ export default function QuestionCard({
           <code>{q.code}</code>
         </pre>
       )}
+      {!corrected && (
+        <p className="elimination-help" id={`elimination-help-${q.id}`}>
+          Deslize uma alternativa para os lados ou use Eliminar. Ela continuará
+          visível; use Restaurar para reconsiderar.
+        </p>
+      )}
+      <span className="sr-only" role="status">
+        {announcement}
+      </span>
       <div
+        aria-describedby={!corrected ? `elimination-help-${q.id}` : undefined}
         className="options"
         role="group"
         aria-label="Alternativas da questão"
@@ -116,22 +155,122 @@ export default function QuestionCard({
         {q.options.map((option, i) => {
           const correct = corrected && i === q.correct;
           const wrong = corrected && i === choice && i !== q.correct;
+          const muted = !corrected && eliminated.includes(i);
           return (
-            <button
+            <div
               key={i}
-              className={`option ${correct ? "correct" : ""} ${wrong ? "wrong" : ""} ${!corrected && choice === i ? "selected" : ""}`}
-              disabled={!ready || corrected}
-              aria-pressed={choice === i}
-              onClick={() => onSelect(i)}
+              className={`option-row ${muted ? "is-eliminated" : ""}`}
+              style={
+                drag?.index === i
+                  ? { transform: `translateX(${drag.x}px)` }
+                  : undefined
+              }
+              onPointerDown={(event) => {
+                if (
+                  !ready ||
+                  corrected ||
+                  event.pointerType === "mouse" ||
+                  !event.isPrimary ||
+                  (event.target as Element).closest(".eliminate-button")
+                )
+                  return;
+                gesture.current = {
+                  x: event.clientX,
+                  y: event.clientY,
+                  pointer: event.pointerId,
+                  index: i,
+                  key: draftKey,
+                };
+                event.currentTarget.setPointerCapture?.(event.pointerId);
+              }}
+              onPointerMove={(event) => {
+                const start = gesture.current;
+                if (
+                  !start ||
+                  start.pointer !== event.pointerId ||
+                  start.key !== draftKey
+                )
+                  return;
+                const dx = event.clientX - start.x,
+                  dy = event.clientY - start.y;
+                if (Math.abs(dy) > Math.abs(dx) && Math.abs(dy) > 12) {
+                  gesture.current = null;
+                  setDrag(null);
+                } else if (Math.abs(dx) > 12)
+                  setDrag({ index: i, x: Math.max(-24, Math.min(24, dx / 3)) });
+              }}
+              onPointerUp={(event) => {
+                const start = gesture.current;
+                gesture.current = null;
+                setDrag(null);
+                if (
+                  !start ||
+                  start.pointer !== event.pointerId ||
+                  start.key !== draftKey ||
+                  start.index !== i
+                )
+                  return;
+                const dx = event.clientX - start.x,
+                  dy = event.clientY - start.y;
+                if (Math.abs(dx) >= 56 && Math.abs(dx) > Math.abs(dy) * 1.5) {
+                  suppressClick.current = {
+                    index: i,
+                    key: draftKey,
+                    until: Date.now() + 600,
+                  };
+                  eliminate(i);
+                }
+              }}
+              onPointerCancel={() => {
+                gesture.current = null;
+                setDrag(null);
+              }}
+              onClickCapture={(event) => {
+                const blocked = suppressClick.current;
+                if (
+                  event.detail !== 0 &&
+                  !(event.target as Element).closest(".eliminate-button") &&
+                  blocked?.key === draftKey &&
+                  blocked.index === i &&
+                  Date.now() < blocked.until
+                ) {
+                  event.preventDefault();
+                  event.stopPropagation();
+                }
+              }}
             >
-              <span className="letter">{letters[i]}</span>
-              <span>{option}</span>
-              {correct ? (
-                <CheckCircle2 size={20} aria-label="Alternativa correta" />
-              ) : wrong ? (
-                <XCircle size={20} aria-label="Sua resposta incorreta" />
-              ) : null}
-            </button>
+              <button
+                className={`option ${correct ? "correct" : ""} ${wrong ? "wrong" : ""} ${!corrected && choice === i ? "selected" : ""}`}
+                disabled={!ready || corrected || muted}
+                aria-pressed={choice === i}
+                onClick={() => onSelect(i)}
+              >
+                <span className="letter">{letters[i]}</span>
+                <span>
+                  <span className="option-text">{option}</span>
+                  {muted && (
+                    <small className="eliminated-label">Eliminada</small>
+                  )}
+                </span>
+                {correct ? (
+                  <CheckCircle2 size={20} aria-label="Alternativa correta" />
+                ) : wrong ? (
+                  <XCircle size={20} aria-label="Sua resposta incorreta" />
+                ) : null}
+              </button>
+              {!corrected && (
+                <button
+                  className="eliminate-button"
+                  disabled={!ready}
+                  aria-label={`${muted ? "Restaurar" : "Eliminar"} alternativa ${letters[i]}`}
+                  aria-pressed={muted}
+                  onClick={() => eliminate(i)}
+                >
+                  {muted ? <Undo2 size={17} /> : <CircleMinus size={17} />}
+                  <span>{muted ? "Restaurar" : "Eliminar"}</span>
+                </button>
+              )}
+            </div>
           );
         })}
       </div>
@@ -173,10 +312,6 @@ export default function QuestionCard({
           <p>
             <strong>Alternativa correta: {letters[q.correct]}.</strong>{" "}
             {q.explanation}
-          </p>
-          <p>
-            <strong>Por que {letters[q.correct]} está certa:</strong>{" "}
-            {q.rationale[q.correct]}
           </p>
           {choice !== q.correct && (
             <p>

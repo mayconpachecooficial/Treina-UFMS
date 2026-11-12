@@ -69,6 +69,7 @@ export type Progress = {
   updatedAt: string;
   answers: Record<string, Attempt>;
   bookmarks: string[];
+  eliminatedOptions?: Record<string, number[]>;
   cursor: string | null;
   history: {
     date: string;

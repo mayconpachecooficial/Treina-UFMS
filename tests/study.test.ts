@@ -120,3 +120,21 @@ test("validador encontra tópico sem cobertura, duplicidade e referência legal 
   assert.ok(e.some((x) => x.includes("referência legal ausente")));
   assert.ok(e.some((x) => x.includes("Outro: sem cobertura")));
 });
+
+test("anotações de eliminação aceitam progresso antigo e rejeitam índices inválidos", () => {
+  const p = emptyProgress();
+  delete p.eliminatedOptions;
+  assert.ok(isProgress(p));
+  assert.ok(isProgress({ ...p, eliminatedOptions: { fixture: [0, 3] } }));
+  for (const value of [
+    null,
+    [],
+    { fixture: [5] },
+    { fixture: [-1] },
+    { fixture: [0, 0] },
+    { fixture: ["1"] },
+    { fixture: "0" },
+  ]) {
+    assert.equal(isProgress({ ...p, eliminatedOptions: value }), false);
+  }
+});

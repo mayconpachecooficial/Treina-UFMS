@@ -18,7 +18,7 @@ A prova oficial contém **60 questões e 100 pontos**: Português 15/15; Inglês
 
 Em 8/11/2026, a Vercel confirmou a implantação do commit `e112c794306f78db4a0c87ec1b39dacaf54bc6a1`; o endereço público respondeu HTTP 200 com o título da plataforma. O projeto Supabase `nmswkgugitppfebxjllf` está configurado na versão publicada: sua API de autenticação respondeu HTTP 200, o provedor de e-mail está habilitado e a tabela `study_progress` existe, com acesso anônimo negado. Nenhum registro de usuário foi lido durante essa verificação.
 
-Os 24 testes automatizados passaram, inclusive recuperação diante de URL inválida do Supabase. Uma instalação limpa também compilou com Node.js 22. A entrada por link de e-mail e a gravação na nuvem com uma conta autenticada ainda não foram verificadas de ponta a ponta. As regras de retorno do login e o isolamento entre duas contas reais exigem essa validação autenticada; os testes existentes verificam esses fluxos com serviços simulados.
+Os 29 testes automatizados passaram, inclusive recuperação diante de URL inválida do Supabase. Uma instalação limpa também compilou com Node.js 22. A entrada por link de e-mail e a gravação na nuvem com uma conta autenticada ainda não foram verificadas de ponta a ponta. As regras de retorno do login e o isolamento entre duas contas reais exigem essa validação autenticada; os testes existentes verificam esses fluxos com serviços simulados.
 
 ## Banco de questões
 
@@ -57,7 +57,8 @@ npm run preview
 - Painel com quantidade real de questões por matéria, aproveitamento e atividade dos últimos sete dias.
 - Filtros por matéria, assunto, dificuldade, situação e busca textual.
 - Cinco alternativas A–E; seleção sem revelar gabarito e botão Responder para confirmar. A correção usa texto, ícone e cor, com justificativa inclusive nos acertos.
-- Explicação da alternativa escolhida, referência e texto-base/trechos de código quando cadastrados.
+- Um único comentário da alternativa correta; em caso de erro, também a justificativa da alternativa escolhida. Referência e texto-base/trechos de código quando cadastrados.
+- Eliminar/restaurar alternativas por deslize horizontal (toque) ou botão acessível; permanecem visíveis, riscadas e esmaecidas, com anotações salvas por conta.
 - Anterior, Próxima e Refazer; retomada da questão em que parou. As respostas confirmadas são preservadas ao navegar.
 - Simulado com questões embaralhadas e confirmação por Responder. As respostas confirmadas são recuperadas após fechar a página; o gabarito comentado aparece ao final.
 - Revisão de erradas e marcadas; desempenho por matéria e por assunto.
@@ -153,3 +154,11 @@ Os botões **Anterior** e **Próxima** mantêm a sequência iniciada, inclusive 
 Novos cadastros por e-mail estavam habilitados na consulta pública às configurações do Supabase. A tela **Entrar ou criar conta** permite a cada pessoa solicitar seu próprio link; `shouldCreateUser: true` explicita o cadastro no primeiro acesso, respeitando a configuração do servidor. Não há necessidade de o proprietário cadastrar respostas ou criar linhas manualmente em `study_progress`: o usuário autenticado recebe sua linha quando o progresso é sincronizado. As políticas continuam limitando cada conta ao seu próprio `user_id`.
 
 O envio real para e-mails externos não foi testado. Se o projeto ainda usa o serviço SMTP padrão do Supabase, o envio é restrito aos endereços da equipe do projeto. Para participantes externos, configure SMTP próprio conforme a [documentação oficial](https://supabase.com/docs/guides/auth/auth-smtp). Isso é uma configuração do serviço; habilitar cadastros, por si só, não confirma que os e-mails externos possam ser entregues. O aplicativo explica a restrição quando o servidor retorna `email_address_not_authorized` e não apresenta um cadastro como concluído nesse caso.
+
+## Eliminação de alternativas
+
+Deslize uma alternativa para a direita ou esquerda, ou use **Eliminar**. O gesto é reversível e não registra tentativa; a alternativa continua visível, com texto riscado e identificação “Eliminada”. A rolagem vertical é preservada. O botão **Restaurar** também funciona por teclado. Essas anotações são persistidas no navegador e no mesmo JSON de progresso do Supabase, sem migração adicional, no campo opcional `eliminatedOptions`. Progresso antigo continua compatível.
+
+Eliminar a alternativa selecionada limpa a seleção. No simulado, retira também sua confirmação até uma nova resposta; o gabarito continua oculto até finalizar. Após a correção, as cores e os ícones mostram o resultado, inclusive se a alternativa correta havia sido eliminada. **Refazer** limpa as eliminações da questão para uma nova tentativa.
+
+O comentário mostra a alternativa correta e `explanation` uma única vez. Em caso de erro, acrescenta `rationale` apenas da alternativa marcada pelo estudante. Esse comportamento vale para estudo e revisão do simulado.

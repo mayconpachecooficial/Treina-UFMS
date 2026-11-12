@@ -2133,3 +2133,60 @@ dialog::backdrop {
     gap: 4px;
   }
 }
+
+/* Alternativas eliminadas permanecem legíveis e podem ser restauradas. */
+.elimination-help {
+  margin: 20px 0 0;
+  font-size: 12px;
+  color: #526054;
+}
+.option-row {
+  display: flex;
+  gap: 8px;
+  touch-action: pan-y pinch-zoom;
+  transition: transform 0.16s ease;
+}
+.option-row .option {
+  flex: 1;
+  min-width: 0;
+}
+.eliminate-button {
+  width: 66px;
+  flex-shrink: 0;
+  min-height: 44px;
+  border: 1px solid #dfe6dc;
+  border-radius: 8px;
+  background: #f8faf6;
+  color: #526054;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.eliminate-button span {
+  font-size: 10px;
+}
+.eliminate-button:hover:not(:disabled) {
+  border-color: #72976e;
+  background: #edf2eb;
+}
+.is-eliminated .option {
+  background: #f1f3f1;
+  border-style: dashed;
+  color: #5c685f;
+}
+.is-eliminated .option-text {
+  text-decoration: line-through;
+}
+.eliminated-label {
+  display: block;
+  font-size: 10px;
+  font-weight: 600;
+  text-decoration: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .option-row {
+    transition: none;
+  }
+}

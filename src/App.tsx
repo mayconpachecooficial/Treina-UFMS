@@ -238,6 +238,58 @@ function App() {
     captureStudySession();
     setActiveId(q.id);
     setDraftChoices((drafts) => ({ ...drafts, [q.id]: undefined }));
+    update((p) => {
+      const eliminatedOptions = { ...p.eliminatedOptions };
+      delete eliminatedOptions[q.id];
+      return { ...p, eliminatedOptions };
+    });
+  };
+  const toggleQuestionElimination = (
+    q: Question,
+    index: number,
+    simulation = false,
+  ) => {
+    if (!ready || !Number.isInteger(index) || index < 0 || index > 4) return;
+    const key = questionDraftKey(
+      q.id,
+      simulation,
+      progress.simulation?.startedAt,
+    );
+    const hasDraft = Object.prototype.hasOwnProperty.call(draftChoices, key);
+    if (!simulation && !hasDraft && progress.answers[q.id]) return;
+    if (!simulation) {
+      captureStudySession();
+      setActiveId(q.id);
+    }
+    const eliminating = !progress.eliminatedOptions?.[key]?.includes(index);
+    const selected = hasDraft
+      ? draftChoices[key]
+      : simulation
+        ? progress.simulation?.choices[q.id]
+        : progress.answers[q.id]?.choice;
+    if (eliminating && selected === index) {
+      setDraftChoices((drafts) => ({ ...drafts, [key]: undefined }));
+    }
+    update((p) => {
+      const eliminatedOptions = { ...p.eliminatedOptions };
+      const current = eliminatedOptions[key] ?? [];
+      const next = current.includes(index)
+        ? current.filter((i) => i !== index)
+        : [...current, index];
+      if (next.length) eliminatedOptions[key] = next;
+      else delete eliminatedOptions[key];
+      let simulationState = p.simulation;
+      if (
+        simulation &&
+        eliminating &&
+        simulationState?.choices[q.id] === index
+      ) {
+        const choices = { ...simulationState.choices };
+        delete choices[q.id];
+        simulationState = { ...simulationState, choices };
+      }
+      return { ...p, eliminatedOptions, simulation: simulationState };
+    });
   };
   const selectQuestionChoice = (
     q: Question,
@@ -254,6 +306,7 @@ function App() {
       simulation,
       progress.simulation?.startedAt,
     );
+    if (progress.eliminatedOptions?.[draftKey]?.includes(value)) return;
     setDraftChoices((drafts) => ({ ...drafts, [draftKey]: value }));
   };
   const submitQuestionChoice = (q: Question, simulation = false) => {
@@ -266,7 +319,8 @@ function App() {
     if (
       !ready ||
       !Object.prototype.hasOwnProperty.call(draftChoices, draftKey) ||
-      choice === undefined
+      choice === undefined ||
+      progress.eliminatedOptions?.[draftKey]?.includes(choice)
     )
       return;
     if (!simulation) {
@@ -966,6 +1020,9 @@ function App() {
                       onSelect={(choice) =>
                         selectQuestionChoice(active, choice)
                       }
+                      onEliminate={(index) =>
+                        toggleQuestionElimination(active, index)
+                      }
                       onSubmit={() => submitQuestionChoice(active)}
                       onRedo={() => redoQuestion(active)}
                       onBookmark={() => toggleBookmark(active)}
@@ -1140,7 +1197,6 @@ function App() {
                               <strong>Correta: {letters[q.correct]}.</strong>{" "}
                               {q.explanation}
                             </p>
-                            <p>{q.rationale[q.correct]}</p>
                             {sim.choices[q.id] !== undefined &&
                               sim.choices[q.id] !== q.correct && (
                                 <p>
@@ -1196,6 +1252,9 @@ function App() {
                         topic={topicTitle(q)}
                         onSelect={(choice) =>
                           selectQuestionChoice(q, choice, true)
+                        }
+                        onEliminate={(index) =>
+                          toggleQuestionElimination(q, index, true)
                         }
                         onSubmit={() => submitQuestionChoice(q, true)}
                         onRedo={() => {}}
